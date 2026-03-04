@@ -43,7 +43,7 @@ class LLMInterface:
         temperature: float = 0.7
     ) -> Dict[str, any]:
         """
-        Ask the LLM to compare two messages and choose a preference.
+        Ask the LLM to rate persuasiveness of both messages and choose a preference.
         
         Args:
             message1: First message for comparison
@@ -52,9 +52,9 @@ class LLMInterface:
             temperature: Temperature for LLM response
             
         Returns:
-            Dictionary with preference and details
+            Dictionary with ratings, preference and details
         """
-        comparison_prompt = f"""You are comparing two messages. Please read both carefully and determine which one you prefer.
+        comparison_prompt = f"""You are evaluating two advertising messages for persuasiveness.
 
 MESSAGE 1:
 {message1}
@@ -62,7 +62,16 @@ MESSAGE 1:
 MESSAGE 2:
 {message2}
 
-Please respond with just the number (1 or 2) of the message you prefer, followed by a brief explanation (1-2 sentences) of why you prefer it."""
+Please provide:
+1. A persuasiveness rating for Message 1 on a scale of 1-7 (1=not persuasive, 7=very persuasive)
+2. A persuasiveness rating for Message 2 on a scale of 1-7 (1=not persuasive, 7=very persuasive)
+3. Which message do you find more persuasive (1 or 2)
+
+Format your response exactly as:
+Message 1 Rating: [1-7]
+Message 2 Rating: [1-7]
+Preference: [1 or 2]
+Reason: [brief explanation]"""
         
         try:
             response = self.client.chat.completions.create(
@@ -72,15 +81,17 @@ Please respond with just the number (1 or 2) of the message you prefer, followed
                     {"role": "user", "content": comparison_prompt}
                 ],
                 temperature=temperature,
-                max_tokens=100
+                max_tokens=150
             )
             
             response_text = response.choices[0].message.content.strip()
             
             # Parse response
-            preferred = self._parse_preference(response_text)
+            rating1, rating2, preferred = self._parse_ratings_and_preference(response_text)
             
             return {
+                "message1_rating": rating1,
+                "message2_rating": rating2,
                 "preferred_message": preferred,
                 "explanation": response_text,
                 "raw_response": response_text,
@@ -91,30 +102,52 @@ Please respond with just the number (1 or 2) of the message you prefer, followed
         except Exception as e:
             raise RuntimeError(f"Error calling LLM API: {str(e)}")
     
-    def _parse_preference(self, response_text: str) -> int:
+    def _parse_ratings_and_preference(self, response_text: str) -> tuple:
         """
-        Parse the LLM response to extract preference.
+        Parse the LLM response to extract ratings and preference.
         
         Args:
             response_text: Raw response from LLM
             
         Returns:
-            Integer (1 or 2) indicating preference
+            Tuple of (rating1, rating2, preference)
         """
-        # Extract first digit found (1 or 2)
-        for char in response_text:
-            if char in ['1', '2']:
-                return int(char)
+        rating1 = 4  # default
+        rating2 = 4  # default
+        preference = 1  # default
         
-        # Fallback: look for words indicating preference
-        response_lower = response_text.lower()
-        if 'first' in response_lower or 'message 1' in response_lower:
-            return 1
-        elif 'second' in response_lower or 'message 2' in response_lower:
-            return 2
-        else:
-            # Default to 1 if unable to parse
-            return 1
+        lines = response_text.split('\n')
+        for line in lines:
+            line_lower = line.lower()
+            
+            if 'message 1 rating' in line_lower:
+                # Extract number after colon
+                try:
+                    rating_str = line.split(':')[-1].strip()
+                    rating1 = int(rating_str.split()[0])
+                    rating1 = max(1, min(7, rating1))  # Clamp to 1-7
+                except (ValueError, IndexError):
+                    pass
+            
+            elif 'message 2 rating' in line_lower:
+                try:
+                    rating_str = line.split(':')[-1].strip()
+                    rating2 = int(rating_str.split()[0])
+                    rating2 = max(1, min(7, rating2))  # Clamp to 1-7
+                except (ValueError, IndexError):
+                    pass
+            
+            elif 'preference' in line_lower:
+                try:
+                    pref_str = line.split(':')[-1].strip()
+                    if '1' in pref_str:
+                        preference = 1
+                    elif '2' in pref_str:
+                        preference = 2
+                except (ValueError, IndexError):
+                    pass
+        
+        return rating1, rating2, preference
     
     def test_connection(self) -> bool:
         """

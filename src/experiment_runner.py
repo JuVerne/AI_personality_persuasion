@@ -47,22 +47,44 @@ class ExperimentRunner:
             tone1: Tone for first message
             tone2: Tone for second message
             topic: Topic for messages
+    
+    def run_single_comparison(
+        self,
+        personality_type: str,
+        emotionality1: str = "emotional",
+        emotionality2: str = "rational",
+        abstraction1: str = "concrete",
+        abstraction2: str = "abstract",
+        product: str = "smartwatch"
+    ) -> dict:
+        """
+        Run a single message comparison.
+        
+        Args:
+            personality_type: Big-5 personality type
+            emotionality1: Emotionality for first message
+            emotionality2: Emotionality for second message
+            abstraction1: Abstraction level for first message
+            abstraction2: Abstraction level for second message
+            product: Product category
             
         Returns:
             Result dictionary
         """
         # Generate message pair
         msg1, msg2 = self.message_generator.generate_pair(
-            tone1=tone1,
-            tone2=tone2,
-            topic=topic
+            emotionality1=emotionality1,
+            emotionality2=emotionality2,
+            abstraction1=abstraction1,
+            abstraction2=abstraction2,
+            product=product
         )
         
         # Get system prompt for personality
         system_prompt = self.personality_creator.get_system_prompt(personality_type)
         
-        # Get LLM preference
-        preference = self.llm_interface.compare_messages(
+        # Get LLM evaluation (now with ratings)
+        evaluation = self.llm_interface.compare_messages(
             message1=msg1["message"],
             message2=msg2["message"],
             system_prompt=system_prompt
@@ -72,29 +94,17 @@ class ExperimentRunner:
         self.results_manager.add_result(
             personality_type=personality_type,
             message1_attrs={
-                "tone": msg1["tone"],
-                "topic": msg1["topic"],
-                "length": msg1["length"],
-                "message": msg1["message"]
-            },
-            message2_attrs={
-                "tone": msg2["tone"],
-                "topic": msg2["topic"],
-                "length": msg2["length"],
-                "message": msg2["message"]
-            },
-            preference=preference["preferred_message"],
-            explanation=preference["explanation"]
-        )
-        
-        return preference
+                "emotionality": msg1["emotionality"],
+                "abstraction": msg1["abstraction"],
+                "product": msg1["product"],
     
     def run_experiment(
         self,
-        num_iterations: int = 5,
+        num_iterations: int = 2,
         personalities: Optional[List[str]] = None,
-        tone_pairs: Optional[List[tuple]] = None,
-        topics: Optional[List[str]] = None,
+        emotionality_pairs: Optional[List[tuple]] = None,
+        abstraction_pairs: Optional[List[tuple]] = None,
+        products: Optional[List[str]] = None,
         verbose: bool = True
     ) -> None:
         """
@@ -103,19 +113,23 @@ class ExperimentRunner:
         Args:
             num_iterations: Number of times to run the experiment
             personalities: List of personality types to test (None = all)
-            tone_pairs: List of (tone1, tone2) tuples (None = academic/casual)
-            topics: List of topics to use (None = all)
+            emotionality_pairs: List of (emotionality1, emotionality2) tuples
+            abstraction_pairs: List of (abstraction1, abstraction2) tuples
+            products: List of products to use (None = all)
             verbose: Whether to print progress
         """
         # Set defaults
         if personalities is None:
             personalities = self.personality_creator.list_personalities()
         
-        if tone_pairs is None:
-            tone_pairs = [("academic", "casual"), ("casual", "academic")]
+        if emotionality_pairs is None:
+            emotionality_pairs = [("emotional", "rational"), ("rational", "emotional")]
         
-        if topics is None:
-            topics = list(self.message_generator.TOPICS.keys())
+        if abstraction_pairs is None:
+            abstraction_pairs = [("concrete", "abstract")]
+        
+        if products is None:
+            products = list(self.message_generator.PRODUCTS.keys())
         
         total_comparisons = 0
         
@@ -125,26 +139,29 @@ class ExperimentRunner:
                     print(f"\n--- Iteration {iteration + 1}/{num_iterations} ---")
                 
                 for personality in personalities:
-                    for tone1, tone2 in tone_pairs:
-                        for topic in topics:
-                            total_comparisons += 1
-                            
-                            if verbose:
-                                print(
-                                    f"  {personality}: {tone1} vs {tone2} ({topic})",
-                                    end=" ... "
+                    for emo1, emo2 in emotionality_pairs:
+                        for abs1, abs2 in abstraction_pairs:
+                            for product in products:
+                                total_comparisons += 1
+                                
+                                if verbose:
+                                    print(
+                                        f"  {personality}: ({emo1}/{abs1}) vs ({emo2}/{abs2}) - {product}",
+                                        end=" ... "
+                                    )
+                                
+                                result = self.run_single_comparison(
+                                    personality_type=personality,
+                                    emotionality1=emo1,
+                                    emotionality2=emo2,
+                                    abstraction1=abs1,
+                                    abstraction2=abs2,
+                                    product=product
                                 )
-                            
-                            result = self.run_single_comparison(
-                                personality_type=personality,
-                                tone1=tone1,
-                                tone2=tone2,
-                                topic=topic
-                            )
-                            
-                            if verbose:
-                                preferred = "Message 1" if result["preferred_message"] == 1 else "Message 2"
-                                print(f"Prefers: {preferred}")
+                                
+                                if verbose:
+                                    preferred = "Msg1" if result["preferred_message"] == 1 else "Msg2"
+                                    print(f"{preferred} (Ratings: {result['message1_rating']}/7 vs {result['message2_rating']}/7)")
             
             print(f"\n✓ Completed {total_comparisons} comparisons")
             

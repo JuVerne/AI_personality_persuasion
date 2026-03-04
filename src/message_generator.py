@@ -1,6 +1,7 @@
 """
 Message/Stimuli Generator
-Generates short messages with specific linguistic attributes.
+Generates advertising messages with specific linguistic attributes.
+Messages vary on two dimensions: emotionality and abstraction/concreteness.
 """
 
 import random
@@ -8,66 +9,89 @@ from typing import Dict, List, Tuple
 
 
 class MessageGenerator:
-    """Generates stimuli messages with configurable linguistic attributes."""
+    """Generates advertising stimuli messages with controlled dimensions."""
     
-    # Tone variations
-    TONES = {
-        "academic": {
+    # Emotionality dimension
+    EMOTIONALITY = {
+        "emotional": {
             "openings": [
-                "According to recent research,",
-                "It has been established that",
-                "The empirical evidence suggests",
-                "Contemporary analysis demonstrates",
-                "From a theoretical perspective,"
+                "Imagine the joy of",
+                "Feel the excitement of",
+                "Experience the delight of",
+                "Discover the happiness that",
+                "Embrace the wonderful feeling of"
             ],
-            "connectors": ["Furthermore,", "Moreover,", "In addition,", "Consequently,"],
+            "connectors": ["You'll love how", "It's amazing because", "What makes it wonderful is", "The best part is"],
             "closings": [
-                "This underscores the importance of further investigation.",
-                "Such findings have significant implications.",
-                "These results warrant additional examination.",
-                "The data supports this conclusion.",
+                "Your life will be so much better!",
+                "You'll be absolutely thrilled!",
+                "It's an amazing experience you deserve!",
+                "You'll fall in love with it!",
             ],
-            "vocabulary": ["utilize", "facilitate", "implement", "optimize", "elucidate"]
+            "vocabulary": ["beautiful", "wonderful", "amazing", "incredible", "fantastic", "love", "adore"]
         },
-        "casual": {
+        "rational": {
             "openings": [
-                "You know,",
-                "Here's the thing,",
-                "Honestly,",
-                "Look,",
-                "So basically,"
+                "Research shows that",
+                "Studies demonstrate that",
+                "Evidence indicates that",
+                "Data proves that",
+                "Analysis reveals that"
             ],
-            "connectors": ["Plus,", "Also,", "And then,", "Like,"],
+            "connectors": ["Notably,", "Significantly,", "Importantly,", "The facts show"],
             "closings": [
-                "Pretty cool, right?",
-                "It's pretty straightforward.",
-                "Makes sense, doesn't it?",
-                "That's basically it.",
+                "This represents a practical advantage.",
+                "The benefits are measurable and clear.",
+                "This solution provides tangible value.",
+                "The results speak for themselves.",
             ],
-            "vocabulary": ["use", "help", "do", "make", "figure out"]
+            "vocabulary": ["effective", "efficient", "proven", "reliable", "superior", "advanced", "optimal"]
         }
     }
     
-    # Message topics (can be extended)
-    TOPICS = {
-        "technology": [
-            "technology adoption",
-            "software development",
-            "artificial intelligence",
-            "digital transformation"
-        ],
-        "environment": [
-            "sustainability practices",
-            "climate action",
-            "renewable energy",
-            "environmental conservation"
-        ],
-        "education": [
-            "learning methods",
-            "educational innovation",
-            "student engagement",
-            "curriculum development"
-        ]
+    # Abstraction/Concreteness dimension
+    ABSTRACTION = {
+        "concrete": {
+            "details": [
+                "saves you 3 hours daily",
+                "costs just $29.99",
+                "comes with a 10-year warranty",
+                "has 500+ five-star reviews",
+                "weighs only 2.5 pounds"
+            ],
+            "examples": [
+                "like our bestselling Model X",
+                "just like Sarah's experience",
+                "for instance, the turbo edition",
+                "for example, in Seattle last month",
+                "think of it like a Swiss Army knife"
+            ]
+        },
+        "abstract": {
+            "benefits": [
+                "enhances your quality of life",
+                "promotes personal growth",
+                "elevates your lifestyle",
+                "empowers your potential",
+                "embodies excellence"
+            ],
+            "concepts": [
+                "represents innovation itself",
+                "embodies modern thinking",
+                "reflects contemporary values",
+                "captures the essence of freedom",
+                "symbolizes progress"
+            ]
+        }
+    }
+    
+    # Advertising products/services (can be extended)
+    PRODUCTS = {
+        "smartwatch": ["fitness tracker", "health monitoring", "smart wearable", "activity tracker"],
+        "coffee_maker": ["brewing caffeine", "morning ritual", "hot beverage", "espresso machine"],
+        "headphones": ["audio experience", "sound quality", "wireless listening", "earbuds"],
+        "fitness_app": ["workout tracking", "health management", "exercise guidance", "fitness coaching"],
+        "cloud_storage": ["file backup", "data protection", "cloud services", "file sharing"]
     }
     
     def __init__(self):
@@ -76,49 +100,51 @@ class MessageGenerator:
     
     def generate_message(
         self,
-        tone: str = "academic",
-        topic: str = "technology",
-        length: str = "short"
+        emotionality: str = "emotional",
+        abstraction: str = "concrete",
+        product: str = "smartwatch"
     ) -> Dict[str, str]:
         """
-        Generate a stimuli message with specified attributes.
+        Generate an advertising message with specified dimensions.
         
         Args:
-            tone: "academic" or "casual"
-            topic: Topic category (technology, environment, education)
-            length: "short" or "long" (controls number of sentences)
+            emotionality: "emotional" or "rational"
+            abstraction: "concrete" or "abstract"
+            product: Product category
             
         Returns:
             Dictionary with message and metadata
         """
-        if tone not in self.TONES:
-            raise ValueError(f"Tone must be one of {list(self.TONES.keys())}")
-        if topic not in self.TOPICS:
-            raise ValueError(f"Topic must be one of {list(self.TOPICS.keys())}")
+        if emotionality not in self.EMOTIONALITY:
+            raise ValueError(f"Emotionality must be one of {list(self.EMOTIONALITY.keys())}")
+        if abstraction not in self.ABSTRACTION:
+            raise ValueError(f"Abstraction must be one of {list(self.ABSTRACTION.keys())}")
+        if product not in self.PRODUCTS:
+            raise ValueError(f"Product must be one of {list(self.PRODUCTS.keys())}")
         
-        tone_config = self.TONES[tone]
-        selected_topic = random.choice(self.TOPICS[topic])
+        emotion_config = self.EMOTIONALITY[emotionality]
+        selected_product = random.choice(self.PRODUCTS[product])
         
         # Build message
-        sentence1 = f"{random.choice(tone_config['openings'])} {selected_topic} {random.choice(tone_config['vocabulary'])}."
+        opening = f"{random.choice(emotion_config['openings'])} {selected_product}."
         
-        sentence2 = f"{random.choice(tone_config['connectors'])} the approach {random.choice(tone_config['vocabulary'])} multiple benefits."
-        
-        sentence3 = random.choice(tone_config['closings'])
-        
-        # Adjust length
-        if length == "long":
-            extra_sentence = f"{random.choice(tone_config['connectors'])} this consideration has practical implications. {random.choice(tone_config['vocabulary'].upper() if tone == 'academic' else tone_config['vocabulary'])} impact across various domains."
-            message = f"{sentence1} {sentence2} {extra_sentence} {sentence3}"
+        # Add detail based on abstraction level
+        if abstraction == "concrete":
+            detail = f"It {random.choice(self.ABSTRACTION['concrete']['details'])}. {random.choice(self.ABSTRACTION['concrete']['examples'])}."
         else:
-            message = f"{sentence1} {sentence2} {sentence3}"
+            detail = f"It {random.choice(self.ABSTRACTION['abstract']['benefits'])} and {random.choice(self.ABSTRACTION['abstract']['concepts'])}."
+        
+        connector = random.choice(emotion_config['connectors'])
+        closing = random.choice(emotion_config['closings'])
+        
+        message = f"{opening} {connector} {detail} {closing}"
         
         metadata = {
             "message": message,
-            "tone": tone,
-            "topic": topic,
-            "length": length,
-            "selected_subtopic": selected_topic
+            "emotionality": emotionality,
+            "abstraction": abstraction,
+            "product": product,
+            "selected_product": selected_product
         }
         
         self.generated_messages.append(metadata)
@@ -126,23 +152,27 @@ class MessageGenerator:
     
     def generate_pair(
         self,
-        tone1: str = "academic",
-        tone2: str = "casual",
-        topic: str = "technology"
+        emotionality1: str = "emotional",
+        emotionality2: str = "rational",
+        abstraction1: str = "concrete",
+        abstraction2: str = "abstract",
+        product: str = "smartwatch"
     ) -> Tuple[Dict[str, str], Dict[str, str]]:
         """
-        Generate a pair of messages with different linguistic attributes.
+        Generate a pair of messages with different dimensions.
         
         Args:
-            tone1: Tone for first message
-            tone2: Tone for second message
-            topic: Topic for both messages
+            emotionality1: Emotionality for first message
+            emotionality2: Emotionality for second message
+            abstraction1: Abstraction level for first message
+            abstraction2: Abstraction level for second message
+            product: Product category for both messages
             
         Returns:
             Tuple of two message dictionaries
         """
-        msg1 = self.generate_message(tone=tone1, topic=topic, length="short")
-        msg2 = self.generate_message(tone=tone2, topic=topic, length="short")
+        msg1 = self.generate_message(emotionality=emotionality1, abstraction=abstraction1, product=product)
+        msg2 = self.generate_message(emotionality=emotionality2, abstraction=abstraction2, product=product)
         return msg1, msg2
     
     def get_generated_count(self) -> int:

@@ -48,21 +48,24 @@ def main():
     # Configuration for the experiment
     num_iterations = 2  # Number of times to repeat the experiment
     personalities = None  # None = test all personalities
-    tone_pairs = [("academic", "casual"), ("casual", "academic")]
-    topics = ["technology", "environment"]  # Can add more topics
+    emotionality_pairs = [("emotional", "rational"), ("rational", "emotional")]  # Compare emotional vs rational
+    abstraction_pairs = [("concrete", "abstract")]  # Compare concrete vs abstract
+    products = ["smartwatch", "coffee_maker"]  # Can add more products
     
     print(f"Configuration:")
     print(f"  Iterations: {num_iterations}")
-    print(f"  Tone pairs: {len(tone_pairs)}")
-    print(f"  Topics: {len(topics)}")
+    print(f"  Emotionality pairs: {len(emotionality_pairs)}")
+    print(f"  Abstraction pairs: {len(abstraction_pairs)}")
+    print(f"  Products: {len(products)}")
     print(f"  Personalities: All available")
     
     try:
         runner.run_experiment(
             num_iterations=num_iterations,
             personalities=personalities,
-            tone_pairs=tone_pairs,
-            topics=topics,
+            emotionality_pairs=emotionality_pairs,
+            abstraction_pairs=abstraction_pairs,
+            products=products,
             verbose=True
         )
     except Exception as e:
