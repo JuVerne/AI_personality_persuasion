@@ -1,38 +1,69 @@
 # Stimulus_Builder Runbook
 
-This is the canonical execution flow for the simplified 3-condition experiment.
+Canonical, reproducible execution guide for the simplified 3-condition rating experiment.
 
-## 1. Build Design Assets
+## Scope
+
+This runbook covers:
+
+1. Building participant-level trial designs.
+2. Pre-flight validation.
+3. Running LLM-based persona ratings.
+4. Running analysis exports.
+5. Rebuilding summary CSV artifacts.
+
+## Prerequisites
+
+- Run commands from repository root (`AI_personality_persuasion-1/`).
+- Python environment has required packages installed.
+- `.env` contains an API key for rating calls.
+  - `CHAT_AI_API_KEY` is the key checked by `prepare_rating_pipeline.py`.
+- Stimuli JSON files exist in `Stimulus_Builder/stimuli_out/<model_alias>/`.
+
+Optional environment setup from YAML:
+
+```bash
+conda env create -f requirements.yml
+conda activate llm
+```
+
+## Step 1: Build Design Assets
+
+Default (uses `stimuli_out/gpt-4o`):
 
 ```bash
 python Stimulus_Builder/build_simplified_experiment.py
 ```
 
-Creates:
-- `design_out_v2/stimuli_index.json`
-- `design_out_v2/stimuli_canonical_p1.json`
-- participant files in `participants_out/`
-- participant design files in `design_out_v2/`
-
-To rate a different model's generated stimuli, choose its source folder:
+Model-specific source:
 
 ```bash
 python Stimulus_Builder/build_simplified_experiment.py --stimuli-model qwen30b
 ```
 
-You can also pass a direct path:
+Direct source path:
 
 ```bash
 python Stimulus_Builder/build_simplified_experiment.py --stimuli-dir Stimulus_Builder/stimuli_out/mistral_large
 ```
 
-## 2. Pre-flight Check
+Expected outputs:
+
+- `Stimulus_Builder/design_out_v2/stimuli_index.json`
+- `Stimulus_Builder/design_out_v2/stimuli_canonical_p1.json`
+- `Stimulus_Builder/participants_out/TYPE_E_HIGH_participants.json`
+- `Stimulus_Builder/participants_out/TYPE_O_HIGH_participants.json`
+- `Stimulus_Builder/design_out_v2/PER_*_design.json`
+
+## Step 2: Pre-flight Validation
+
+Standard check:
 
 ```bash
 python Stimulus_Builder/prepare_rating_pipeline.py
 ```
 
-Optional auto-build when files are missing:
+Auto-build missing assets:
 
 ```bash
 python Stimulus_Builder/prepare_rating_pipeline.py --build-if-missing
@@ -44,27 +75,28 @@ Model-specific pre-flight:
 python Stimulus_Builder/prepare_rating_pipeline.py --stimuli-model gpt-4o
 ```
 
-## 3. Run Ratings
+Pre-flight verifies:
 
-Test mode:
+- source stimuli count > 0
+- design and participant files exist and are internally consistent
+- persona templates exist
+- `openai` package is installed
+- API key is available
 
-runs a small smoke test of the rating pipeline.
+## Step 3: Run Ratings
 
-In this script, --test means:
-
-process only 1 participant
-process only 3 trials for that participant
-make up to 3 LLM rating calls (fewer if resume skips existing files)
-write one output JSON per trial to Stimulus_Builder/persona_ratings_out
-It still uses the normal LLM path (llm_interface.rate_ad_structured), so it requires:
-
-openai installed
-API key set (OPENAI_API_KEY or CHAT_AI_API_KEY)
-valid design files already in Stimulus_Builder/design_out_v2
+Smoke test mode (safe first run):
 
 ```bash
 python Stimulus_Builder/run_ratings.py --test
 ```
+
+`--test` behavior:
+
+- 1 participant
+- 3 trials
+- up to 3 model calls (less if resume skips)
+- writes trial output JSON to `Stimulus_Builder/persona_ratings_out/`
 
 Full run:
 
@@ -72,25 +104,53 @@ Full run:
 python Stimulus_Builder/run_ratings.py
 ```
 
-## 4. Analyze Ratings
+## Step 4: Analyze Ratings
+
+Script analysis:
 
 ```bash
 python Stimulus_Builder/analyze_ratings.py
 ```
 
-Outputs are written to:
-- `stimuli_out_analysed/ratings_analysis/`
+Primary output folder:
 
-## 5. Rebuild Stimuli Analysis Summary CSV
+- `Stimulus_Builder/stimuli_out_analysed/ratings_analysis/`
 
-If `stimuli_out_analysed/stimuli_analysis_summary.csv` is stale/empty:
+Notebook analysis option:
+
+- `Stimulus_Builder/analyze_ratings_pipeline.ipynb`
+- Includes validation, descriptives, plots, regression, manipulation checks, and CSV exports.
+
+## Step 5: Rebuild Stimuli Summary CSV
+
+If `stimuli_analysis_summary.csv` is stale or missing:
 
 ```bash
 python Stimulus_Builder/rebuild_stimuli_analysis_summary.py
 ```
 
-## Notes
+Writes:
 
-- Active stimulus generator notebook: `GWDG_Message_builder.ipynb`
-- Active persona rater notebook reference: `persona_rater_v2.ipynb`
-- Archived backups are in `_archive/`
+- `Stimulus_Builder/stimuli_out_analysed/stimuli_analysis_summary.csv`
+
+## Troubleshooting
+
+### Pre-flight fails on API key
+
+- Ensure `.env` contains `CHAT_AI_API_KEY=<your_key>`.
+
+### No ratings found in analysis
+
+- Check `persona_ratings_out/` has `status: "ok"` JSON records.
+- Confirm you are pointing to the right folder.
+
+### Notebook path issues
+
+- Re-run notebook from top so the path-resolution cell resets `INPUT_PATH`.
+
+## Reproducibility Checklist
+
+- Keep one command history per run (or save terminal log).
+- Do not mix outputs from different stimulus source models unless intentional.
+- Commit scripts/docs before large reruns.
+- Archive legacy notebooks in `_archive/` rather than deleting run history.

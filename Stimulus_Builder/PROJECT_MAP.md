@@ -1,89 +1,124 @@
 # Stimulus_Builder Project Map
 
-This file defines the current working structure for this repository.
+High-level map of the current Stimulus_Builder architecture, file ownership, and expected data flow.
 
-## Active Pipeline (keep and maintain)
+## 1. Purpose
+
+`Stimulus_Builder/` contains the end-to-end workflow for:
+
+1. selecting canonical message stimuli,
+2. building participant trial designs,
+3. collecting persona-based LLM ratings,
+4. exporting analysis artifacts.
+
+## 2. Primary Workflow (Canonical)
+
+### Build and validation
 
 - `build_simplified_experiment.py`
-  - Builds:
-    - `design_out_v2/stimuli_index.json`
-    - `design_out_v2/stimuli_canonical_p1.json`
-    - participant files in `participants_out/`
-    - per-participant design files in `design_out_v2/`
-- `run_ratings.py`
-  - Executes one LLM rating call per trial.
-  - Writes one output JSON per trial to `persona_ratings_out/`.
-  - Supports resume and test mode.
+  - Builds canonical 3-condition experiment assets.
+  - Inputs: `stimuli_out/<model_alias>/*.json`
+  - Outputs: `design_out_v2/` and `participants_out/`
 - `prepare_rating_pipeline.py`
-  - Pre-flight checks before ratings.
-  - Optional auto-build of missing design assets.
-- `analyze_ratings.py`
-  - Post-run descriptive summaries and OLS regression outputs.
-- `rebuild_stimuli_analysis_summary.py`
-  - Rebuilds `stimuli_out_analysed/stimuli_analysis_summary.csv` from analysed JSON files.
+  - Performs pre-flight checks before rating calls.
+  - Can auto-build missing assets (`--build-if-missing`).
+
+### Rating execution
+
+- `run_ratings.py`
+  - Runs structured LLM rating calls per trial.
+  - Supports resume and `--test`.
+  - Writes one JSON per trial into `persona_ratings_out/`.
 - `llm_interface.py`
-  - OpenAI client setup and structured rating call (`rate_ad_structured`).
-  - Persona context now loads from `persona_templates/*.json`.
+  - API client glue and structured rating call function.
 - `retry_logic.py`
-  - Parse/validation retry logic for strict JSON output.
+  - Retry strategy for parse/validation failures.
 
-## Generation Pipeline (legacy but still usable)
+### Analysis and exports
 
-- `run_batch.py`, `generation.py`, `prompts.py`, `records.py`, `validation.py`, `config.py`
-  - Used for stimulus generation.
-  - Not required for rating-only runs once stimuli are already finalized.
+- `analyze_ratings.py`
+  - Script-based descriptive + OLS outputs.
+- `analyze_ratings_pipeline.ipynb`
+  - Notebook-based stepwise analysis and interpretation.
+- `rebuild_stimuli_analysis_summary.py`
+  - Rebuilds `stimuli_out_analysed/stimuli_analysis_summary.csv`.
 
-## Data / Outputs
+## 3. Generation Utilities (Used Upstream, Not Required For Rating-Only Runs)
 
-- Source stimuli for simplified experiment:
-  - `stimuli_out/<model_alias>/*.json` (selected via `--stimuli-model` or `--stimuli-dir`)
-- Built design assets:
-  - `design_out_v2/`
+- `run_batch.py`
+- `generation.py`
+- `prompts.py`
+- `records.py`
+- `validation.py`
+- `config.py`
 
-  1) stimuli_index.json:
-    Full catalog of all readable stimuli in the chosen source folder (one row per stimulus JSON).
-    Built by build_simplified_experiment.py (line 37).
-    Written to build_simplified_experiment.py (line 267).
+These are used when creating/validating stimuli, but are not required if finalized stimuli already exist.
 
-  2) stimuli_canonical_p1.json
-    Reduced “experiment set”: for each product, exactly GENERIC, E_PLUS, O_PLUS.
-    Logic: E_PLUS/O_PLUS must be paraphrase_id == 1; GENERIC picks the smallest available paraphrase id.
-    Built by build_simplified_experiment.py (line 72), validated at build_simplified_experiment.py (line 270).
+## 4. Key Data Directories
 
-  3) PER_*HIGH_0050_design.json (and other *_design.json)
-  Participant-specific trial schedule (18 trials), including condition order and the actual ad text used per trial.
-  Built by build_simplified_experiment.py (line 150), saved at build_simplified_experiment.py (line 220).
-  Current design files explicitly show source stimuli came from stimuli_out/gpt-4o via experiment.source_stimuli_dir (e.g. PER_EHIGH_0050_design.json (line 9)).
+- `stimuli_out/<model_alias>/`
+  - Source stimuli JSON files (input to design build).
+- `design_out_v2/`
+  - Design artifacts consumed by rating scripts.
+- `participants_out/`
+  - Participant definitions by persona type.
+- `persona_templates/`
+  - Persona cards and rating behavior guidance.
+- `persona_ratings_out/`
+  - Trial-level rating outputs (`status: ok|error`).
+- `stimuli_out_analysed/`
+  - Analysis outputs and summary CSVs.
 
-- Ratings output:
-  - `persona_ratings_out/`
+## 5. Core File Contracts
 
+### `design_out_v2/stimuli_index.json`
 
-## Notebooks Status
+- Full readable stimulus catalog from chosen source folder.
+- One row per source stimulus JSON.
 
-- Primary notebook candidates:
-  - `GWDG_Message_builder.ipynb`
-  - `persona_rater_v2.ipynb`
-- Likely redundant / cleanup candidates:
-  - Archived in `_archive/`:
-    - `_archive/GWDG_Message_builder copy.ipynb`
-    - `_archive/notebooks/analysis.ipynb`
-    - `_archive/notebooks/generate.ipynb`
+### `design_out_v2/stimuli_canonical_p1.json`
 
-## Cleanup Candidates (review before deletion)
+- Canonical subset for experiment:
+  - exactly `GENERIC`, `E_PLUS`, `O_PLUS` per product.
+- Selection rule:
+  - `E_PLUS` and `O_PLUS`: `paraphrase_id == 1`
+  - `GENERIC`: smallest available `paraphrase_id`
 
-- Root-level folders outside `Stimulus_Builder`:
-  - Archived under `_archive/root_level_outputs/`:
-    - `_archive/root_level_outputs/design_out_v2_root/`
-    - `_archive/root_level_outputs/participants_out_root/`
-- Archived legacy design files:
-  - `_archive/design_out_v2_legacy/` (old 30-trial schema)
-- Unused helper in scripts:
-  - `prompts.py::build_batch_prompts` appears unused in current code references.
+### `design_out_v2/PER_*_design.json`
 
-## Rule of Thumb Going Forward
+- Participant-specific 18-trial schedule.
+- Includes actual message text and assigned condition order.
 
-- Treat this folder as authoritative:
-  - `Stimulus_Builder/`
-- Prefer scripts over ad-hoc notebook steps for reproducibility.
-- Keep only one canonical notebook per task and move backups to a dedicated archive folder.
+### `persona_ratings_out/*.json`
+
+- One JSON per completed trial rating.
+- Expected top-level keys:
+  - `status`, `participant`, `trial`, `rating`
+- Analysis scripts use only `status == "ok"` rows.
+
+## 6. Notebooks and Archive Policy
+
+- Active analysis notebook:
+  - `analyze_ratings_pipeline.ipynb`
+- Legacy notebooks and backups:
+  - store in `_archive/` to preserve provenance.
+
+## 7. Ownership and Safety Rules
+
+- Treat `Stimulus_Builder/` as the authoritative experiment module.
+- Prefer script entry points for reproducibility.
+- Keep branch commits scoped to this folder when possible.
+- Do not delete historical artifacts unless archived first.
+
+## 8. Quick Entry Points
+
+- Build designs:
+  - `python Stimulus_Builder/build_simplified_experiment.py`
+- Pre-flight:
+  - `python Stimulus_Builder/prepare_rating_pipeline.py`
+- Test ratings:
+  - `python Stimulus_Builder/run_ratings.py --test`
+- Full ratings:
+  - `python Stimulus_Builder/run_ratings.py`
+- Analyze:
+  - `python Stimulus_Builder/analyze_ratings.py`
