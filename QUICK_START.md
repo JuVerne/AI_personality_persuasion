@@ -1,5 +1,13 @@
 # Quick Start Guide
 
+## Note on Active Workflow
+
+For current work, use the `Stimulus_Builder/` pipeline:
+- `python Stimulus_Builder/build_simplified_experiment.py`
+- `python Stimulus_Builder/run_ratings.py --test`
+
+The steps below describe the older `src/` experiment path.
+
 ## 1. Setup (2 minutes)
 
 ```bash
