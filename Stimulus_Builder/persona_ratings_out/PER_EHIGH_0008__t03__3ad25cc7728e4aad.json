@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-22T17:10:13Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "participant": {
+    "participant_type": "TYPE_E_HIGH",
+    "persona_id": "PER_EHIGH_0008",
+    "respondent_seed": 110008
+  },
+  "trial": {
+    "trial_index": 3,
+    "order_code": "B",
+    "condition_label": "NON_TARGETED",
+    "stimulus_variant": "O_PLUS",
+    "product_id": "P3",
+    "product_name": "Noise-cancelling headphones",
+    "condition_id": "6251befad00c12ae",
+    "output_id": "3ad25cc7728e4aad",
+    "paraphrase_id": 1,
+    "full_message": "Immerse yourself in a world of sound with endless possibilities. Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus. Discover the O_PLUS headphones, where imagination meets innovation. Whether you're exploring new perspectives during your travels or diving into the depths of experimental music, these headphones offer an experience that transcends the ordinary. Curated for those who value meaning and creativity, they transform how you perceive sound and silence, opening doors to unfamiliar ideas. Learn more about how these headphones can enhance your auditory journey."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 4,
+    "effectiveness_rating_q2": 5,
+    "motivation": "The ad feels a bit too abstract and introspective, lacking the lively and socially engaging energy I prefer."
+  }
+}

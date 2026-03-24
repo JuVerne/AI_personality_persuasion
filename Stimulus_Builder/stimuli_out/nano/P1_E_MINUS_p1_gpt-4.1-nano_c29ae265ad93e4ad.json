@@ -1,0 +1,42 @@
+{
+  "id": {
+    "condition_id": "9c52a86f7ce27649",
+    "output_id": "c29ae265ad93e4ad"
+  },
+  "generation": {
+    "model": "gpt-4.1-nano",
+    "temperature": 0.8,
+    "timestamp_utc": "2026-02-28T17:09:24Z"
+  },
+  "meta": {
+    "product_id": "P1",
+    "product_name": "Weekend city trip",
+    "trait_axis": "EXTRAVERSION",
+    "variant": "E_MINUS",
+    "paraphrase_id": 1,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "content": {
+    "hook": "Enjoy a peaceful city escape tailored to your own pace.",
+    "facts": "Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in.",
+    "framing": "This trip allows you to unwind quietly at your convenience, with the freedom to choose your departure time and plan in private. It’s designed for those who prefer calm, solo experiences without the pressure of scheduled activities. You can relax at your own rhythm, in a quiet environment that respects your personal space.",
+    "cta": "Take some time for yourself and explore the city at a leisurely pace.",
+    "full_message": "Enjoy a peaceful city escape tailored to your own pace. Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. This trip allows you to unwind quietly at your convenience, with the freedom to choose your departure time and plan in private. It’s designed for those who prefer calm, solo experiences without the pressure of scheduled activities. You can relax at your own rhythm, in a quiet environment that respects your personal space. Take some time for yourself and explore the city at a leisurely pace."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 95,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

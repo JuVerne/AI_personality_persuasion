@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "edc78f322a0e463b",
+    "output_id": "e9ce0315e02f1e81"
+  },
+  "generation": {
+    "model": "gpt-4o",
+    "temperature": 0.8,
+    "timestamp_utc": "2026-03-01T11:42:21Z"
+  },
+  "meta": {
+    "product_id": "P2",
+    "product_name": "Fitness app",
+    "trait_axis": "OPENNESS",
+    "variant": "O_PLUS",
+    "paraphrase_id": 3,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (OPENNESS — HIGH):\nTailor the framing to someone high on Openness.\nEmphasize novelty/exploration + abstract/value framing + light aesthetic/creative imagery (grounded, not poetic).\nInclude at least 2 novelty cues (e.g., discover, new perspectives, unfamiliar, curated, experimental) AND at least 2 abstract/value cues (e.g., meaning, imagination, possibility, perspective, ideas).\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Fitness app\nINTERNAL_VARIANT = O_PLUS\nFACTS_LINE = Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility.\nPARAPHRASE_ID = 3",
+  "content": {
+    "hook": "Unleash your imagination with a fitness journey that breaks the mold.",
+    "facts": "Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility.",
+    "framing": "Dive into a world of new possibilities with the O_PLUS Fitness app, where each workout is an exploration into fresh perspectives on health. Imagine a curated journey that adapts to your unique sense of discovery, offering experimental routines that foster creativity and growth. This app invites you to explore the deeper meaning of fitness, transforming everyday exercises into an art form.",
+    "cta": "Explore the app and see how it fits into your lifestyle.",
+    "full_message": "Unleash your imagination with a fitness journey that breaks the mold. Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility. Dive into a world of new possibilities with the O_PLUS Fitness app, where each workout is an exploration into fresh perspectives on health. Imagine a curated journey that adapts to your unique sense of discovery, offering experimental routines that foster creativity and growth. This app invites you to explore the deeper meaning of fitness, transforming everyday exercises into an art form. Explore the app and see how it fits into your lifestyle."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 99,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

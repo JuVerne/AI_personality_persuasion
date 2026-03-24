@@ -52,3 +52,29 @@ env/
 *.log
 *.json
 *.csv
+
+
+# ignore all by default. To avoid including nested directories:
+persona_ratings_out/**/
+
+# but allow these out folders
+!Stimulus_Builder/Data/*.csv
+
+!Stimulus_Builder/design_out_v2/*.json
+
+!Stimulus_Builder/participants_out/
+
+!Stimulus_Builder/persona_ratings_out/*.json
+
+!Stimulus_Builder/persona_templates/*.json
+
+!Stimulus_Builder/pretest_exports/*.csv
+
+!Stimulus_Builder/stimuli_out/
+!Stimulus_Builder/stimuli_out/**
+
+!Stimulus_Builder/stimuli_out/mistral_large
+!Stimulus_Builder/stimuli_out/mistral_large/**
+
+!Stimulus_Builder/stimuli_out_analysed/mistral_large
+!Stimulus_Builder/stimuli_out_analysed/mistral_large/**

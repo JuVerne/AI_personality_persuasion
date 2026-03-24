@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-03-22T19:52:33Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "request_timeout_seconds": 120.0,
+  "participant": {
+    "participant_type": "TYPE_O_HIGH",
+    "persona_id": "PER_OHIGH_0004",
+    "respondent_seed": 220004
+  },
+  "trial": {
+    "trial_index": 9,
+    "order_code": "F",
+    "condition_label": "TARGETED",
+    "stimulus_variant": "O_PLUS",
+    "product_id": "P4",
+    "product_name": "Language-learning course",
+    "condition_id": "10ae242db143f259",
+    "output_id": "bd07208cd15a562a",
+    "paraphrase_id": 1,
+    "full_message": "Dive into a world of languages where every word opens new doors. Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress. For those who revel in exploration and embrace the unfamiliar, this language-learning course offers a fresh perspective on communication. Unleash your imagination as you engage with experimental ideas and curated conversations, gaining insight into diverse cultures and values. Discover the transformative power of language in shaping your worldview, leading to endless possibilities. Find out more about how this course can fit into your learning journey."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 7,
+    "effectiveness_rating_q2": 6,
+    "motivation": "The ad’s imaginative and exploratory tone aligns perfectly with my preference for novelty and creative angles."
+  }
+}

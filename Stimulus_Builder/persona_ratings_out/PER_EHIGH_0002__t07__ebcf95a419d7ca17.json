@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-22T17:06:49Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "participant": {
+    "participant_type": "TYPE_E_HIGH",
+    "persona_id": "PER_EHIGH_0002",
+    "respondent_seed": 110002
+  },
+  "trial": {
+    "trial_index": 7,
+    "order_code": "D",
+    "condition_label": "NON_TARGETED",
+    "stimulus_variant": "O_PLUS",
+    "product_id": "P1",
+    "product_name": "Weekend city trip",
+    "condition_id": "461c8ba5b4047818",
+    "output_id": "ebcf95a419d7ca17",
+    "paraphrase_id": 1,
+    "full_message": "Explore the city from a brand-new perspective. Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. Imagine the possibilities of wandering through iconic streets, letting your imagination guide you to hidden gems and experimental art spaces. This curated trip offers an escape from the familiar, inviting you to discover the deeper meaning and vibrant ideas within the city's heart. Embrace the chance to see the world through an unfamiliar lens and expand your creative horizons. Plan your next weekend city trip with ease."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 5,
+    "effectiveness_rating_q2": 4,
+    "motivation": "The ad feels thoughtful but lacks the lively, shareable energy that would fully engage me."
+  }
+}

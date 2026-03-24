@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-03-22T21:00:35Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "request_timeout_seconds": 120.0,
+  "participant": {
+    "participant_type": "TYPE_O_HIGH",
+    "persona_id": "PER_OHIGH_0008",
+    "respondent_seed": 220008
+  },
+  "trial": {
+    "trial_index": 2,
+    "order_code": "B",
+    "condition_label": "GENERIC",
+    "stimulus_variant": "GENERIC",
+    "product_id": "P6",
+    "product_name": "Productivity tool",
+    "condition_id": "c3bcca9b64876605",
+    "output_id": "d543ae92c7bd4060",
+    "paraphrase_id": 1,
+    "full_message": "Unlock your potential with the ultimate productivity tool. Task lists, calendars, reminders, and templates that sync across devices, with simple sharing for projects. This tool is designed to seamlessly integrate into your daily routine, making it easier to organize your tasks and manage your time effectively. Whether you're planning a project or simply keeping track of your day-to-day activities, this productivity tool offers a straightforward way to stay on top of everything. It provides an intuitive platform that helps streamline your workflow. Discover how this tool can complement your daily productivity."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 3,
+    "effectiveness_rating_q2": 4,
+    "motivation": "The ad is clear and functional but lacks the imaginative or distinctive elements that would truly engage my preference for novelty and creativity."
+  }
+}

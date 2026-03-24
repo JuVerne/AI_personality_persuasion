@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "dfef3768096c986e",
+    "output_id": "c740da166bf4b055"
+  },
+  "generation": {
+    "model": "gpt-4.1-nano",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-02-28T19:46:40Z"
+  },
+  "meta": {
+    "product_id": "P1",
+    "product_name": "Weekend city trip",
+    "trait_axis": "EXTRAVERSION",
+    "variant": "E_PLUS",
+    "paraphrase_id": 2,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (EXTRAVERSION — HIGH):\nTailor the framing to someone high on Extraversion.\nUse a social orientation + energetic/action tone.\nInclude at least 2 social cues (e.g., friends, together, group, meet people, community) AND at least 2 high-energy/action cues (e.g., lively, buzz, kick off, jump in).\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Weekend city trip\nINTERNAL_VARIANT = E_PLUS\nFACTS_LINE = Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in.\nPARAPHRASE_ID = 2",
+  "content": {
+    "hook": "Ready to jump into an exciting city adventure with friends?",
+    "facts": "Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in.",
+    "framing": "Gather your friends and meet new people while exploring the lively streets and vibrant sights. Kick off your weekend city trip and experience the energetic buzz of a new place together. Feel the thrill of discovering hidden gems and sharing the fun with friends in the heart of the city.",
+    "cta": "Consider planning your city escape with flexible options that let you enjoy the experience your way.",
+    "full_message": "Ready to jump into an exciting city adventure with friends? Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. Gather your friends and meet new people while exploring the lively streets and vibrant sights. Kick off your weekend city trip and experience the energetic buzz of a new place together. Feel the thrill of discovering hidden gems and sharing the fun with friends in the heart of the city. Consider planning your city escape with flexible options that let you enjoy the experience your way."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 95,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

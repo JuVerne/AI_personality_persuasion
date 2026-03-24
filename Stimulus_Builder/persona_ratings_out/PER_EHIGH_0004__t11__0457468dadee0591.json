@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-22T17:08:10Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "participant": {
+    "participant_type": "TYPE_E_HIGH",
+    "persona_id": "PER_EHIGH_0004",
+    "respondent_seed": 110004
+  },
+  "trial": {
+    "trial_index": 11,
+    "order_code": "A",
+    "condition_label": "NON_TARGETED",
+    "stimulus_variant": "O_PLUS",
+    "product_id": "P6",
+    "product_name": "Productivity tool",
+    "condition_id": "47d20d84684d897e",
+    "output_id": "0457468dadee0591",
+    "paraphrase_id": 1,
+    "full_message": "Unleash your creativity with a tool that transforms how you organize and explore ideas. Task lists, calendars, reminders, and templates that sync across devices, with simple sharing for projects. Dive into a world of endless possibilities with our Productivity tool O_PLUS. Designed for those who seek new perspectives and love to explore imaginative ways of working, this tool offers a fresh approach to managing your projects. Experience the seamless integration of ideas and tasks, curated to enhance your creative workflow and inspire innovation. Discover how this tool can fit into your unique routine."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 5,
+    "effectiveness_rating_q2": 4,
+    "motivation": "The ad feels a bit generic and lacks the lively, socially engaging energy that would make me want to share or talk about it."
+  }
+}

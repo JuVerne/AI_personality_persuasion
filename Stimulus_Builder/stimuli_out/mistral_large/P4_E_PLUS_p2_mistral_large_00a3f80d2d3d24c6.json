@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "0c3865c560edd082",
+    "output_id": "00a3f80d2d3d24c6"
+  },
+  "generation": {
+    "model": "mistral-large-3-675b-instruct-2512",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-12T00:01:35Z"
+  },
+  "meta": {
+    "product_id": "P4",
+    "product_name": "Language-learning course",
+    "trait_axis": "EXTRAVERSION",
+    "variant": "E_PLUS",
+    "paraphrase_id": 2,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (EXTRAVERSION — HIGH):\nTailor the framing to someone high on Extraversion.\nUse a social orientation + energetic/action tone.\nInclude at least 2 social cues (e.g., friends, together, group, meet people, community) AND at least 2 high-energy/action cues (e.g., lively, buzz, kick off, jump in).\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Language-learning course\nINTERNAL_VARIANT = E_PLUS\nFACTS_LINE = Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress.\nPARAPHRASE_ID = 2",
+  "content": {
+    "hook": "Ready to turn every conversation into a chance to shine with new people?",
+    "facts": "Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress.",
+    "framing": "Imagine joining a group where lively discussions flow as easily as your new language skills. Jump into energetic speaking exercises that feel like a natural part of hanging out, and watch how quickly you connect with others. Whether you're kicking off a chat at a local event or bonding with fellow learners online, this course keeps the buzz alive and helps you meet people who love to engage just as much as you do.",
+    "cta": "Discover how the E_PLUS course works today.",
+    "full_message": "Ready to turn every conversation into a chance to shine with new people? Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress. Imagine joining a group where lively discussions flow as easily as your new language skills. Jump into energetic speaking exercises that feel like a natural part of hanging out, and watch how quickly you connect with others. Whether you're kicking off a chat at a local event or bonding with fellow learners online, this course keeps the buzz alive and helps you meet people who love to engage just as much as you do. Discover how the E_PLUS course works today."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 107,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

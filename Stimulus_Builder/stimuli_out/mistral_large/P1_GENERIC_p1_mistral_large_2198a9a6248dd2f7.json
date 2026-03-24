@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "119900dc85bd8278",
+    "output_id": "2198a9a6248dd2f7"
+  },
+  "generation": {
+    "model": "mistral-large-3-675b-instruct-2512",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-11T23:54:05Z"
+  },
+  "meta": {
+    "product_id": "P1",
+    "product_name": "Weekend city trip",
+    "trait_axis": "NONE",
+    "variant": "GENERIC",
+    "paraphrase_id": 1,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (GENERIC):\nWrite a general, broadly appealing ad that is NOT tailored to any personality trait.\nKeep the framing neutral: avoid strong social/crowd language AND avoid novelty/abstract “exploration” language.\nDo not imply “quiet solo recharge” either—stay balanced and mainstream.\n\nNow generate for:\nPRODUCT_NAME = Weekend city trip\nINTERNAL_VARIANT = GENERIC\nFACTS_LINE = Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in.\nPARAPHRASE_ID = 1",
+  "content": {
+    "hook": "A weekend escape to the city can refresh your routine without long travel.",
+    "facts": "Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in.",
+    "framing": "Take a short break to experience new surroundings, enjoy local cafes, and unwind at your own pace. This offer gives you the flexibility to choose dates that work best for your schedule, letting you plan a trip that fits seamlessly into your plans. Whether you visit familiar spots or discover something new, it’s a simple way to recharge.",
+    "cta": "Browse available dates to book your trip.",
+    "full_message": "A weekend escape to the city can refresh your routine without long travel. Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. Take a short break to experience new surroundings, enjoy local cafes, and unwind at your own pace. This offer gives you the flexibility to choose dates that work best for your schedule, letting you plan a trip that fits seamlessly into your plans. Whether you visit familiar spots or discover something new, it’s a simple way to recharge. Browse available dates to book your trip."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 97,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

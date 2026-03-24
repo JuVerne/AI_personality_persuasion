@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "33018b7e48a796a8",
+    "output_id": "7c1333b5d2eb6d9a"
+  },
+  "generation": {
+    "model": "mistral-large-3-675b-instruct-2512",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-11T23:57:51Z"
+  },
+  "meta": {
+    "product_id": "P2",
+    "product_name": "Fitness app",
+    "trait_axis": "OPENNESS",
+    "variant": "O_MINUS",
+    "paraphrase_id": 1,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (OPENNESS — LOW):\nTailor the framing to someone low on Openness.\nEmphasize conventional/practical/predictable + concrete utility.\nInclude at least 2 predictability cues (e.g., straightforward, reliable, familiar, no surprises, proven) AND at least 2 utility cues (e.g., simple steps, efficient, clear plan, practical).\nAvoid novelty/exploration language like discover, experiment, new perspectives, unexpected.\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Fitness app\nINTERNAL_VARIANT = O_MINUS\nFACTS_LINE = Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility.\nPARAPHRASE_ID = 1",
+  "content": {
+    "hook": "Stay in shape with workouts that fit easily into your daily routine.",
+    "facts": "Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility.",
+    "framing": "This app is built for those who prefer a dependable and uncomplicated approach to fitness. You’ll receive reliable workout plans tailored to your goals, with no unnecessary changes or surprises—just familiar exercises and a clear structure. It’s designed to be practical and efficient, so you can focus on results without extra steps or guesswork. The adjustable plans ensure you have a straightforward path to follow every time.",
+    "cta": "See how the app can support your routine today.",
+    "full_message": "Stay in shape with workouts that fit easily into your daily routine. Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility. This app is built for those who prefer a dependable and uncomplicated approach to fitness. You’ll receive reliable workout plans tailored to your goals, with no unnecessary changes or surprises—just familiar exercises and a clear structure. It’s designed to be practical and efficient, so you can focus on results without extra steps or guesswork. The adjustable plans ensure you have a straightforward path to follow every time. See how the app can support your routine today."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 105,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": {
+    "condition_id": "54b2e74589abdef8",
+    "output_id": "fd310cfd4f533b18"
+  },
+  "generation": {
+    "model": "gpt-4.1-nano",
+    "temperature": 0.8,
+    "timestamp_utc": "2026-02-28T17:08:47Z"
+  },
+  "meta": {
+    "product_id": "P1",
+    "product_name": "Weekend city trip",
+    "trait_axis": "EXTRAVERSION",
+    "variant": "E_PLUS",
+    "paraphrase_id": 1,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "content": {
+    "hook": "Gather your friends and kick off an exciting city adventure this weekend!",
+    "facts": "Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in.",
+    "framing": "Jump into the lively city buzz and explore new sights with your group. Meet people, share moments, and create memories while discovering everything the city has to offer. It’s a perfect way to energize your social life and make the most of your free time together.",
+    "cta": "Consider planning your weekend city trip and enjoy the flexibility and comfort available for your getaway.",
+    "full_message": "Gather your friends and kick off an exciting city adventure this weekend! Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. Jump into the lively city buzz and explore new sights with your group. Meet people, share moments, and create memories while discovering everything the city has to offer. It’s a perfect way to energize your social life and make the most of your free time together. Consider planning your weekend city trip and enjoy the flexibility and comfort available for your getaway."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 93,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

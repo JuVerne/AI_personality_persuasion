@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-22T17:10:22Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "participant": {
+    "participant_type": "TYPE_E_HIGH",
+    "persona_id": "PER_EHIGH_0008",
+    "respondent_seed": 110008
+  },
+  "trial": {
+    "trial_index": 14,
+    "order_code": "F",
+    "condition_label": "NON_TARGETED",
+    "stimulus_variant": "O_PLUS",
+    "product_id": "P2",
+    "product_name": "Fitness app",
+    "condition_id": "34ccb6d5019b4e0a",
+    "output_id": "ca789f02491f760a",
+    "paraphrase_id": 1,
+    "full_message": "Discover new paths to a balanced life with our innovative fitness app. Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility. Explore the possibilities of your fitness journey, where each session is crafted to inspire your imagination and elevate your routine. Designed for those who seek new perspectives and value the fusion of creativity with wellness, this app opens a gateway to an unfamiliar realm of exercise. Embrace the art of self-discovery through experimental workouts that align with your personal vision of health. Experience a fresh take on fitness with this app today."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 3,
+    "effectiveness_rating_q2": 4,
+    "motivation": "The ad feels too abstract and lacks the energetic, social buzz I respond to."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "86885f22427e191d",
+    "output_id": "00902b1ce4be9203"
+  },
+  "generation": {
+    "model": "gpt-4o",
+    "temperature": 0.8,
+    "timestamp_utc": "2026-03-01T12:13:47Z"
+  },
+  "meta": {
+    "product_id": "P3",
+    "product_name": "Noise-cancelling headphones",
+    "trait_axis": "OPENNESS",
+    "variant": "O_PLUS",
+    "paraphrase_id": 3,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (OPENNESS — HIGH):\nTailor the framing to someone high on Openness.\nEmphasize novelty/exploration + abstract/value framing + light aesthetic/creative imagery (grounded, not poetic).\nInclude at least 2 novelty cues (e.g., discover, new perspectives, unfamiliar, curated, experimental) AND at least 2 abstract/value cues (e.g., meaning, imagination, possibility, perspective, ideas).\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Noise-cancelling headphones\nINTERNAL_VARIANT = O_PLUS\nFACTS_LINE = Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus.\nPARAPHRASE_ID = 3",
+  "content": {
+    "hook": "Experience sound in a whole new dimension.",
+    "facts": "Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus.",
+    "framing": "Dive into a realm where your imagination takes flight with the O_PLUS headphones. Perfectly curated for those who seek new perspectives in their auditory experiences, these headphones offer an experimental gateway to both unfamiliar sounds and serene silence. Embrace the possibilities of exploring ideas and meanings through rich audio clarity, whether you're on a journey or in creative focus.",
+    "cta": "Consider if the O_PLUS headphones align with your auditory needs.",
+    "full_message": "Experience sound in a whole new dimension. Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus. Dive into a realm where your imagination takes flight with the O_PLUS headphones. Perfectly curated for those who seek new perspectives in their auditory experiences, these headphones offer an experimental gateway to both unfamiliar sounds and serene silence. Embrace the possibilities of exploring ideas and meanings through rich audio clarity, whether you're on a journey or in creative focus. Consider if the O_PLUS headphones align with your auditory needs."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 91,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

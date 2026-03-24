@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "f4affb50ed752be8",
+    "output_id": "743bb6e894717397"
+  },
+  "generation": {
+    "model": "mistral-large-3-675b-instruct-2512",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-12T00:04:28Z"
+  },
+  "meta": {
+    "product_id": "P5",
+    "product_name": "Subscription coffee",
+    "trait_axis": "EXTRAVERSION",
+    "variant": "E_PLUS",
+    "paraphrase_id": 1,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (EXTRAVERSION — HIGH):\nTailor the framing to someone high on Extraversion.\nUse a social orientation + energetic/action tone.\nInclude at least 2 social cues (e.g., friends, together, group, meet people, community) AND at least 2 high-energy/action cues (e.g., lively, buzz, kick off, jump in).\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Subscription coffee\nINTERNAL_VARIANT = E_PLUS\nFACTS_LINE = Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery.\nPARAPHRASE_ID = 1",
+  "content": {
+    "hook": "A fresh brew that turns every gathering into the highlight of the week.",
+    "facts": "Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery.",
+    "framing": "There’s nothing like the buzz of a great coffee to bring a group together—whether you’re hosting friends for a weekend brunch or kicking off a spontaneous game night. Each delivery arrives ready to fuel conversations, laughter, and those unplanned moments that make life more vibrant. With flavors that stand out, it’s an easy way to keep the energy alive and make sure no occasion falls flat.",
+    "cta": "Try a subscription to match your rhythm.",
+    "full_message": "A fresh brew that turns every gathering into the highlight of the week. Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery. There’s nothing like the buzz of a great coffee to bring a group together—whether you’re hosting friends for a weekend brunch or kicking off a spontaneous game night. Each delivery arrives ready to fuel conversations, laughter, and those unplanned moments that make life more vibrant. With flavors that stand out, it’s an easy way to keep the energy alive and make sure no occasion falls flat. Try a subscription to match your rhythm."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 104,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

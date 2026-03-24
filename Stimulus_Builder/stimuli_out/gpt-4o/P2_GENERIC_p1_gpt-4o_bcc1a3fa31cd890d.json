@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "7484f3dcc06a3bd2",
+    "output_id": "bcc1a3fa31cd890d"
+  },
+  "generation": {
+    "model": "gpt-4o",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-01T08:55:06Z"
+  },
+  "meta": {
+    "product_id": "P2",
+    "product_name": "Fitness app",
+    "trait_axis": "NONE",
+    "variant": "GENERIC",
+    "paraphrase_id": 1,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (GENERIC):\nWrite a general, broadly appealing ad that is NOT tailored to any personality trait.\nKeep the framing neutral: avoid strong social/crowd language AND avoid novelty/abstract “exploration” language.\nDo not imply “quiet solo recharge” either—stay balanced and mainstream.\n\nNow generate for:\nPRODUCT_NAME = Fitness app\nINTERNAL_VARIANT = GENERIC\nFACTS_LINE = Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility.\nPARAPHRASE_ID = 1",
+  "content": {
+    "hook": "Discover a flexible way to stay active and maintain your fitness goals.",
+    "facts": "Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility.",
+    "framing": "This fitness app offers a straightforward solution to incorporate exercise into your daily routine, whether you're at home or on the go. It provides a range of workout lengths and types, allowing you to choose what fits best with your schedule and preferences. Adaptable options ensure your fitness journey is tailored to your changing needs.",
+    "cta": "Consider downloading the app to explore its features today.",
+    "full_message": "Discover a flexible way to stay active and maintain your fitness goals. Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility. This fitness app offers a straightforward solution to incorporate exercise into your daily routine, whether you're at home or on the go. It provides a range of workout lengths and types, allowing you to choose what fits best with your schedule and preferences. Adaptable options ensure your fitness journey is tailored to your changing needs. Consider downloading the app to explore its features today."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 92,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

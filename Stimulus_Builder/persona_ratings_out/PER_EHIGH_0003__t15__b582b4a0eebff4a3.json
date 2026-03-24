@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-22T17:07:29Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "participant": {
+    "participant_type": "TYPE_E_HIGH",
+    "persona_id": "PER_EHIGH_0003",
+    "respondent_seed": 110003
+  },
+  "trial": {
+    "trial_index": 15,
+    "order_code": "A",
+    "condition_label": "GENERIC",
+    "stimulus_variant": "GENERIC",
+    "product_id": "P4",
+    "product_name": "Language-learning course",
+    "condition_id": "53744078cc1c0f1c",
+    "output_id": "b582b4a0eebff4a3",
+    "paraphrase_id": 1,
+    "full_message": "Discover a new way to enhance your language skills. Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress. This language-learning course offers a balanced approach to mastering a new language, making it suitable for anyone looking to learn effectively. The program’s methodical structure supports learners in building a strong foundation, with regular practice and feedback to guide you along the way. Whether you’re starting fresh or brushing up on existing skills, this course provides all the tools you need. Explore our language-learning course today to find out more."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 4,
+    "effectiveness_rating_q2": 3,
+    "motivation": "The ad feels too methodical and lacks the energy and social buzz that would make me want to share or engage with it."
+  }
+}

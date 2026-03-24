@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-03-22T19:45:36Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "request_timeout_seconds": 120.0,
+  "participant": {
+    "participant_type": "TYPE_O_HIGH",
+    "persona_id": "PER_OHIGH_0003",
+    "respondent_seed": 220003
+  },
+  "trial": {
+    "trial_index": 5,
+    "order_code": "D",
+    "condition_label": "GENERIC",
+    "stimulus_variant": "GENERIC",
+    "product_id": "P3",
+    "product_name": "Noise-cancelling headphones",
+    "condition_id": "fbde57b6f2b9ab2a",
+    "output_id": "93a62b2424266910",
+    "paraphrase_id": 1,
+    "full_message": "Experience sound like never before with our latest innovation. Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus. Whether you're on a long flight or simply trying to concentrate in a bustling environment, these headphones offer an ideal solution. Their design ensures you can immerse yourself in what matters most, while effortlessly transitioning between full sound immersion and staying aware of your surroundings. Perfect for everyday use and travel alike, they combine functionality with comfort. Discover more about how these headphones can fit into your lifestyle."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 5,
+    "effectiveness_rating_q2": 4,
+    "motivation": "The ad is clear and functional but lacks the imaginative or distinctive phrasing that would fully engage my preference for novelty."
+  }
+}

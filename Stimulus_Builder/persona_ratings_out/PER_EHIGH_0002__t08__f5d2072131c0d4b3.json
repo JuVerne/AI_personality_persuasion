@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-22T17:06:50Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "participant": {
+    "participant_type": "TYPE_E_HIGH",
+    "persona_id": "PER_EHIGH_0002",
+    "respondent_seed": 110002
+  },
+  "trial": {
+    "trial_index": 8,
+    "order_code": "D",
+    "condition_label": "GENERIC",
+    "stimulus_variant": "GENERIC",
+    "product_id": "P1",
+    "product_name": "Weekend city trip",
+    "condition_id": "119900dc85bd8278",
+    "output_id": "f5d2072131c0d4b3",
+    "paraphrase_id": 1,
+    "full_message": "Dreaming of a refreshing city escape? Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. Picture yourself enjoying a leisurely weekend in a bustling city, exploring new sights and savoring local flavors. Whether you seek cultural experiences or simply a change of scenery, this trip offers the perfect balance of relaxation and urban adventure. Designed to cater to a variety of interests, it's an ideal opportunity to enjoy time away from the everyday routine. Discover more details and plan your city adventure today."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 5,
+    "effectiveness_rating_q2": 4,
+    "motivation": "The ad feels pleasant but lacks the lively, shareable energy and confident momentum that would fully engage me."
+  }
+}

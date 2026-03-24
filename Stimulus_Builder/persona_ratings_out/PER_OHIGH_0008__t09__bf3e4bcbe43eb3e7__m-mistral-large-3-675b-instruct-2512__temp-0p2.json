@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-03-22T21:02:48Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "request_timeout_seconds": 120.0,
+  "participant": {
+    "participant_type": "TYPE_O_HIGH",
+    "persona_id": "PER_OHIGH_0008",
+    "respondent_seed": 220008
+  },
+  "trial": {
+    "trial_index": 9,
+    "order_code": "D",
+    "condition_label": "TARGETED",
+    "stimulus_variant": "O_PLUS",
+    "product_id": "P5",
+    "product_name": "Subscription coffee",
+    "condition_id": "eabf20db2f2c1590",
+    "output_id": "bf3e4bcbe43eb3e7",
+    "paraphrase_id": 1,
+    "full_message": "Discover a world of coffee crafted for the curious mind. Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery. Imagine exploring the rich tapestry of flavors, each cup offering a new perspective on the art of coffee. With each curated delivery, embrace the possibility of expanding your palate and fueling your imagination. This isn’t just coffee; it’s an invitation to experience the unfamiliar and delve into the depths of taste and aroma. Consider subscribing to embark on this journey of taste and discovery."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 7,
+    "effectiveness_rating_q2": 6,
+    "motivation": "The ad’s imaginative and evocative language, emphasizing discovery and sensory exploration, strongly resonates with my preference for novelty and creativity."
+  }
+}

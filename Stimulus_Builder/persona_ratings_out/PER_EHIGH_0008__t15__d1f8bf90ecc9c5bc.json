@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-22T17:10:23Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "participant": {
+    "participant_type": "TYPE_E_HIGH",
+    "persona_id": "PER_EHIGH_0008",
+    "respondent_seed": 110008
+  },
+  "trial": {
+    "trial_index": 15,
+    "order_code": "F",
+    "condition_label": "TARGETED",
+    "stimulus_variant": "E_PLUS",
+    "product_id": "P2",
+    "product_name": "Fitness app",
+    "condition_id": "ff0e1a50a6f8673d",
+    "output_id": "d1f8bf90ecc9c5bc",
+    "paraphrase_id": 1,
+    "full_message": "Ready to energize your social life with a fitness twist? Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility. Imagine kicking off each day with a lively workout session, then sharing the buzz with friends at the gym or on a group run. Dive into action and explore new routines together, making every moment more dynamic and social. With options tailored to your preferences, every session becomes an adventure to enjoy with your community. Discover how the Fitness app can fit into your lifestyle."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 7,
+    "effectiveness_rating_q2": 6,
+    "motivation": "The ad’s lively, social energy and confident framing make it feel exciting and easy to share with others."
+  }
+}

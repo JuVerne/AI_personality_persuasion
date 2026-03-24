@@ -1,0 +1,7 @@
+contrast,bundle_or_axis,successes,n_products,p_value
+E_PLUS vs E_MINUS,E_energy,1,1,0.5
+E_PLUS vs E_MINUS,E_social,1,1,0.5
+O_PLUS vs O_MINUS,O_abstract,1,1,0.5
+O_PLUS vs O_MINUS,O_creative,1,1,0.5
+O_PLUS vs O_MINUS,O_novelty,1,1,0.5
+O_PLUS vs O_MINUS,O_practical,1,1,0.5

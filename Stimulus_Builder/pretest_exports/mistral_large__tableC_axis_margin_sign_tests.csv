@@ -1,0 +1,5 @@
+variant,axis,successes,n_products,p_value
+E_PLUS,E_margin,6,6,0.015625
+E_MINUS,E_margin,4,6,0.34375
+O_PLUS,O_margin,6,6,0.015625
+O_MINUS,O_margin,4,6,0.34375

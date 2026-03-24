@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "ec010908645a9830",
+    "output_id": "e6f649f21e4c96fb"
+  },
+  "generation": {
+    "model": "gpt-4o",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-01T10:28:19Z"
+  },
+  "meta": {
+    "product_id": "P1",
+    "product_name": "Weekend city trip",
+    "trait_axis": "OPENNESS",
+    "variant": "O_PLUS",
+    "paraphrase_id": 2,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (OPENNESS — HIGH):\nTailor the framing to someone high on Openness.\nEmphasize novelty/exploration + abstract/value framing + light aesthetic/creative imagery (grounded, not poetic).\nInclude at least 2 novelty cues (e.g., discover, new perspectives, unfamiliar, curated, experimental) AND at least 2 abstract/value cues (e.g., meaning, imagination, possibility, perspective, ideas).\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Weekend city trip\nINTERNAL_VARIANT = O_PLUS\nFACTS_LINE = Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in.\nPARAPHRASE_ID = 2",
+  "content": {
+    "hook": "Embark on a weekend city trip that awakens your sense of wonder.",
+    "facts": "Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in.",
+    "framing": "Dive into a world of unfamiliar streets and experimental cuisine, where every corner holds a new possibility for discovery. This curated experience invites you to explore and find meaning in the novel perspectives that only a vibrant cityscape can offer. Imagine the thrill of new ideas sparking your imagination as you wander through art-lined avenues and historic landmarks.",
+    "cta": "Plan your next city adventure with this flexible package.",
+    "full_message": "Embark on a weekend city trip that awakens your sense of wonder. Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. Dive into a world of unfamiliar streets and experimental cuisine, where every corner holds a new possibility for discovery. This curated experience invites you to explore and find meaning in the novel perspectives that only a vibrant cityscape can offer. Imagine the thrill of new ideas sparking your imagination as you wander through art-lined avenues and historic landmarks. Plan your next city adventure with this flexible package."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 98,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

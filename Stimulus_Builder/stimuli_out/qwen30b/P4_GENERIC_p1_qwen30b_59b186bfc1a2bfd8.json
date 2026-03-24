@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "53744078cc1c0f1c",
+    "output_id": "59b186bfc1a2bfd8"
+  },
+  "generation": {
+    "model": "qwen3-30b-a3b-instruct-2507",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-12T00:08:33Z"
+  },
+  "meta": {
+    "product_id": "P4",
+    "product_name": "Language-learning course",
+    "trait_axis": "NONE",
+    "variant": "GENERIC",
+    "paraphrase_id": 1,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (GENERIC):\nWrite a general, broadly appealing ad that is NOT tailored to any personality trait.\nKeep the framing neutral: avoid strong social/crowd language AND avoid novelty/abstract “exploration” language.\nDo not imply “quiet solo recharge” either—stay balanced and mainstream.\n\nNow generate for:\nPRODUCT_NAME = Language-learning course\nINTERNAL_VARIANT = GENERIC\nFACTS_LINE = Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress.\nPARAPHRASE_ID = 1\n/no_think",
+  "content": {
+    "hook": "Master a new language with a clear, step-by-step approach.",
+    "facts": "Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress.",
+    "framing": "The course is built to support consistent learning without overwhelming schedules. Each lesson builds on the previous one, helping you develop real communication skills over time. Progress is visible through regular milestones and practice. You’ll engage in daily speaking exercises that reinforce vocabulary and grammar in context. The feedback system helps identify areas to improve, making each session productive and focused.",
+    "cta": "Explore the course structure and see how it fits your routine.",
+    "full_message": "Master a new language with a clear, step-by-step approach. Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress. The course is built to support consistent learning without overwhelming schedules. Each lesson builds on the previous one, helping you develop real communication skills over time. Progress is visible through regular milestones and practice. You’ll engage in daily speaking exercises that reinforce vocabulary and grammar in context. The feedback system helps identify areas to improve, making each session productive and focused. Explore the course structure and see how it fits your routine."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 94,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

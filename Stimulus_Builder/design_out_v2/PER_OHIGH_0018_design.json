@@ -1,0 +1,244 @@
+{
+  "participant": {
+    "participant_type": "TYPE_O_HIGH",
+    "persona_id": "PER_OHIGH_0018",
+    "respondent_seed": 220018
+  },
+  "experiment": {
+    "design_name": "simplified_3_condition_v1",
+    "source_stimuli_dir": "C:\\Users\\alect\\OneDrive\\Masters\\031_Modeling_Communication_and_Abstraction_Part_I\\Final project\\AI_personality_persuasion-1\\Stimulus_Builder\\stimuli_out\\gpt-4o",
+    "n_products": 6,
+    "n_trials": 18,
+    "conditions": [
+      "TARGETED",
+      "NON_TARGETED",
+      "GENERIC"
+    ],
+    "order_codes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ]
+  },
+  "trials": [
+    {
+      "trial_index": 1,
+      "order_code": "F",
+      "condition_label": "GENERIC",
+      "stimulus_variant": "GENERIC",
+      "product_id": "P3",
+      "product_name": "Noise-cancelling headphones",
+      "condition_id": "fbde57b6f2b9ab2a",
+      "output_id": "93a62b2424266910",
+      "paraphrase_id": 1,
+      "full_message": "Experience sound like never before with our latest innovation. Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus. Whether you're on a long flight or simply trying to concentrate in a bustling environment, these headphones offer an ideal solution. Their design ensures you can immerse yourself in what matters most, while effortlessly transitioning between full sound immersion and staying aware of your surroundings. Perfect for everyday use and travel alike, they combine functionality with comfort. Discover more about how these headphones can fit into your lifestyle."
+    },
+    {
+      "trial_index": 2,
+      "order_code": "F",
+      "condition_label": "NON_TARGETED",
+      "stimulus_variant": "E_PLUS",
+      "product_id": "P3",
+      "product_name": "Noise-cancelling headphones",
+      "condition_id": "0cc738179c3cee34",
+      "output_id": "988014988ef84625",
+      "paraphrase_id": 1,
+      "full_message": "Experience the perfect sound escape in any setting. Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus. Imagine kicking off your day with the buzz of your favorite tunes while meeting friends or enjoying a lively community event. The E_PLUS headphones offer the perfect blend of immersion and awareness, allowing you to jump into conversations or enjoy solo moments all in one go. Whether you're on the move or hanging out with a group, these headphones keep you connected and energized. Discover how E_PLUS headphones fit into your lifestyle."
+    },
+    {
+      "trial_index": 3,
+      "order_code": "F",
+      "condition_label": "TARGETED",
+      "stimulus_variant": "O_PLUS",
+      "product_id": "P3",
+      "product_name": "Noise-cancelling headphones",
+      "condition_id": "6251befad00c12ae",
+      "output_id": "3ad25cc7728e4aad",
+      "paraphrase_id": 1,
+      "full_message": "Immerse yourself in a world of sound with endless possibilities. Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus. Discover the O_PLUS headphones, where imagination meets innovation. Whether you're exploring new perspectives during your travels or diving into the depths of experimental music, these headphones offer an experience that transcends the ordinary. Curated for those who value meaning and creativity, they transform how you perceive sound and silence, opening doors to unfamiliar ideas. Learn more about how these headphones can enhance your auditory journey."
+    },
+    {
+      "trial_index": 4,
+      "order_code": "A",
+      "condition_label": "TARGETED",
+      "stimulus_variant": "O_PLUS",
+      "product_id": "P1",
+      "product_name": "Weekend city trip",
+      "condition_id": "461c8ba5b4047818",
+      "output_id": "ebcf95a419d7ca17",
+      "paraphrase_id": 1,
+      "full_message": "Explore the city from a brand-new perspective. Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. Imagine the possibilities of wandering through iconic streets, letting your imagination guide you to hidden gems and experimental art spaces. This curated trip offers an escape from the familiar, inviting you to discover the deeper meaning and vibrant ideas within the city's heart. Embrace the chance to see the world through an unfamiliar lens and expand your creative horizons. Plan your next weekend city trip with ease."
+    },
+    {
+      "trial_index": 5,
+      "order_code": "A",
+      "condition_label": "NON_TARGETED",
+      "stimulus_variant": "E_PLUS",
+      "product_id": "P1",
+      "product_name": "Weekend city trip",
+      "condition_id": "54b2e74589abdef8",
+      "output_id": "3371e94acf164ac9",
+      "paraphrase_id": 1,
+      "full_message": "Ready for an adventure-packed weekend getaway? Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. Picture yourself exploring the buzzing streets, surrounded by friends, as you dive into the vibrant city life. With endless opportunities to meet new people and share memorable experiences, the weekend kicks off with energy and excitement. Whether you're joining a lively group for a city tour or hitting the town to discover hidden gems, every moment is filled with social connections and high-energy fun. Learn more about your next weekend city trip."
+    },
+    {
+      "trial_index": 6,
+      "order_code": "A",
+      "condition_label": "GENERIC",
+      "stimulus_variant": "GENERIC",
+      "product_id": "P1",
+      "product_name": "Weekend city trip",
+      "condition_id": "119900dc85bd8278",
+      "output_id": "f5d2072131c0d4b3",
+      "paraphrase_id": 1,
+      "full_message": "Dreaming of a refreshing city escape? Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. Picture yourself enjoying a leisurely weekend in a bustling city, exploring new sights and savoring local flavors. Whether you seek cultural experiences or simply a change of scenery, this trip offers the perfect balance of relaxation and urban adventure. Designed to cater to a variety of interests, it's an ideal opportunity to enjoy time away from the everyday routine. Discover more details and plan your city adventure today."
+    },
+    {
+      "trial_index": 7,
+      "order_code": "B",
+      "condition_label": "TARGETED",
+      "stimulus_variant": "O_PLUS",
+      "product_id": "P5",
+      "product_name": "Subscription coffee",
+      "condition_id": "eabf20db2f2c1590",
+      "output_id": "bf3e4bcbe43eb3e7",
+      "paraphrase_id": 1,
+      "full_message": "Discover a world of coffee crafted for the curious mind. Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery. Imagine exploring the rich tapestry of flavors, each cup offering a new perspective on the art of coffee. With each curated delivery, embrace the possibility of expanding your palate and fueling your imagination. This isn’t just coffee; it’s an invitation to experience the unfamiliar and delve into the depths of taste and aroma. Consider subscribing to embark on this journey of taste and discovery."
+    },
+    {
+      "trial_index": 8,
+      "order_code": "B",
+      "condition_label": "GENERIC",
+      "stimulus_variant": "GENERIC",
+      "product_id": "P5",
+      "product_name": "Subscription coffee",
+      "condition_id": "ff53820571a11746",
+      "output_id": "e9bc512019e85a51",
+      "paraphrase_id": 1,
+      "full_message": "Discover the perfect way to enjoy your coffee at home. Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery. Whether you savor your morning brew or enjoy a contemplative afternoon cup, our subscription brings convenience and quality to your doorstep. The flexibility to skip or pause ensures it fits seamlessly into your routine. Each delivery is curated with your taste in mind, complete with insightful notes to enhance your experience. Learn more about how our coffee subscription can fit into your lifestyle."
+    },
+    {
+      "trial_index": 9,
+      "order_code": "B",
+      "condition_label": "NON_TARGETED",
+      "stimulus_variant": "E_PLUS",
+      "product_id": "P5",
+      "product_name": "Subscription coffee",
+      "condition_id": "f4affb50ed752be8",
+      "output_id": "0395ba6fe630f5ba",
+      "paraphrase_id": 1,
+      "full_message": "Ready to energize your social life with every cup? Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery. Imagine starting your day with a lively group of friends, each enjoying a freshly brewed cup of coffee that kicks off the morning buzz. With E_PLUS, you can explore new flavors together, sharing tasting notes and experiences that spark conversations. Whether you’re hosting a gathering or need a pick-me-up for your next adventure, this subscription keeps the momentum going. Discover the perfect roast to elevate your mornings."
+    },
+    {
+      "trial_index": 10,
+      "order_code": "C",
+      "condition_label": "NON_TARGETED",
+      "stimulus_variant": "E_PLUS",
+      "product_id": "P4",
+      "product_name": "Language-learning course",
+      "condition_id": "402909928f6a2c01",
+      "output_id": "f1dd44da64717dd8",
+      "paraphrase_id": 1,
+      "full_message": "Ready to dive into a new adventure with friends? Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress. Jump into the lively world of E_PLUS, where every session feels like a gathering of friends eager to explore new languages. Connect with others who share your enthusiasm and energy, making language learning an exciting group journey. Feel the buzz as you tackle challenges together and celebrate each milestone achieved with your community by your side. Explore more about E_PLUS and see how it fits into your learning journey."
+    },
+    {
+      "trial_index": 11,
+      "order_code": "C",
+      "condition_label": "TARGETED",
+      "stimulus_variant": "O_PLUS",
+      "product_id": "P4",
+      "product_name": "Language-learning course",
+      "condition_id": "10ae242db143f259",
+      "output_id": "bd07208cd15a562a",
+      "paraphrase_id": 1,
+      "full_message": "Dive into a world of languages where every word opens new doors. Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress. For those who revel in exploration and embrace the unfamiliar, this language-learning course offers a fresh perspective on communication. Unleash your imagination as you engage with experimental ideas and curated conversations, gaining insight into diverse cultures and values. Discover the transformative power of language in shaping your worldview, leading to endless possibilities. Find out more about how this course can fit into your learning journey."
+    },
+    {
+      "trial_index": 12,
+      "order_code": "C",
+      "condition_label": "GENERIC",
+      "stimulus_variant": "GENERIC",
+      "product_id": "P4",
+      "product_name": "Language-learning course",
+      "condition_id": "53744078cc1c0f1c",
+      "output_id": "b582b4a0eebff4a3",
+      "paraphrase_id": 1,
+      "full_message": "Discover a new way to enhance your language skills. Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress. This language-learning course offers a balanced approach to mastering a new language, making it suitable for anyone looking to learn effectively. The program’s methodical structure supports learners in building a strong foundation, with regular practice and feedback to guide you along the way. Whether you’re starting fresh or brushing up on existing skills, this course provides all the tools you need. Explore our language-learning course today to find out more."
+    },
+    {
+      "trial_index": 13,
+      "order_code": "D",
+      "condition_label": "NON_TARGETED",
+      "stimulus_variant": "E_PLUS",
+      "product_id": "P2",
+      "product_name": "Fitness app",
+      "condition_id": "ff0e1a50a6f8673d",
+      "output_id": "d1f8bf90ecc9c5bc",
+      "paraphrase_id": 1,
+      "full_message": "Ready to energize your social life with a fitness twist? Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility. Imagine kicking off each day with a lively workout session, then sharing the buzz with friends at the gym or on a group run. Dive into action and explore new routines together, making every moment more dynamic and social. With options tailored to your preferences, every session becomes an adventure to enjoy with your community. Discover how the Fitness app can fit into your lifestyle."
+    },
+    {
+      "trial_index": 14,
+      "order_code": "D",
+      "condition_label": "GENERIC",
+      "stimulus_variant": "GENERIC",
+      "product_id": "P2",
+      "product_name": "Fitness app",
+      "condition_id": "7484f3dcc06a3bd2",
+      "output_id": "bcc1a3fa31cd890d",
+      "paraphrase_id": 1,
+      "full_message": "Discover a flexible way to stay active and maintain your fitness goals. Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility. This fitness app offers a straightforward solution to incorporate exercise into your daily routine, whether you're at home or on the go. It provides a range of workout lengths and types, allowing you to choose what fits best with your schedule and preferences. Adaptable options ensure your fitness journey is tailored to your changing needs. Consider downloading the app to explore its features today."
+    },
+    {
+      "trial_index": 15,
+      "order_code": "D",
+      "condition_label": "TARGETED",
+      "stimulus_variant": "O_PLUS",
+      "product_id": "P2",
+      "product_name": "Fitness app",
+      "condition_id": "34ccb6d5019b4e0a",
+      "output_id": "ca789f02491f760a",
+      "paraphrase_id": 1,
+      "full_message": "Discover new paths to a balanced life with our innovative fitness app. Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility. Explore the possibilities of your fitness journey, where each session is crafted to inspire your imagination and elevate your routine. Designed for those who seek new perspectives and value the fusion of creativity with wellness, this app opens a gateway to an unfamiliar realm of exercise. Embrace the art of self-discovery through experimental workouts that align with your personal vision of health. Experience a fresh take on fitness with this app today."
+    },
+    {
+      "trial_index": 16,
+      "order_code": "E",
+      "condition_label": "GENERIC",
+      "stimulus_variant": "GENERIC",
+      "product_id": "P6",
+      "product_name": "Productivity tool",
+      "condition_id": "c3bcca9b64876605",
+      "output_id": "d543ae92c7bd4060",
+      "paraphrase_id": 1,
+      "full_message": "Unlock your potential with the ultimate productivity tool. Task lists, calendars, reminders, and templates that sync across devices, with simple sharing for projects. This tool is designed to seamlessly integrate into your daily routine, making it easier to organize your tasks and manage your time effectively. Whether you're planning a project or simply keeping track of your day-to-day activities, this productivity tool offers a straightforward way to stay on top of everything. It provides an intuitive platform that helps streamline your workflow. Discover how this tool can complement your daily productivity."
+    },
+    {
+      "trial_index": 17,
+      "order_code": "E",
+      "condition_label": "TARGETED",
+      "stimulus_variant": "O_PLUS",
+      "product_id": "P6",
+      "product_name": "Productivity tool",
+      "condition_id": "47d20d84684d897e",
+      "output_id": "0457468dadee0591",
+      "paraphrase_id": 1,
+      "full_message": "Unleash your creativity with a tool that transforms how you organize and explore ideas. Task lists, calendars, reminders, and templates that sync across devices, with simple sharing for projects. Dive into a world of endless possibilities with our Productivity tool O_PLUS. Designed for those who seek new perspectives and love to explore imaginative ways of working, this tool offers a fresh approach to managing your projects. Experience the seamless integration of ideas and tasks, curated to enhance your creative workflow and inspire innovation. Discover how this tool can fit into your unique routine."
+    },
+    {
+      "trial_index": 18,
+      "order_code": "E",
+      "condition_label": "NON_TARGETED",
+      "stimulus_variant": "E_PLUS",
+      "product_id": "P6",
+      "product_name": "Productivity tool",
+      "condition_id": "249efe4ad4ed37cd",
+      "output_id": "d6f32685b390990c",
+      "paraphrase_id": 1,
+      "full_message": "Discover a dynamic way to boost your productivity! Task lists, calendars, reminders, and templates that sync across devices, with simple sharing for projects. Imagine kicking off your day with a tool that keeps you and your friends in the loop, making every project a lively collaboration. Whether you're working together on group assignments or planning exciting events, E_PLUS brings the buzz of seamless coordination. Dive into your tasks with the energy of a team that’s always in sync, ready to meet goals and celebrate achievements. Explore how E_PLUS can fit into your daily routine."
+    }
+  ]
+}

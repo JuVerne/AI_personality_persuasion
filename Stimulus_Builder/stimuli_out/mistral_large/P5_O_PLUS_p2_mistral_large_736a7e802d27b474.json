@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "2c7103426bea3bc9",
+    "output_id": "736a7e802d27b474"
+  },
+  "generation": {
+    "model": "mistral-large-3-675b-instruct-2512",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-12T00:05:00Z"
+  },
+  "meta": {
+    "product_id": "P5",
+    "product_name": "Subscription coffee",
+    "trait_axis": "OPENNESS",
+    "variant": "O_PLUS",
+    "paraphrase_id": 2,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (OPENNESS — HIGH):\nTailor the framing to someone high on Openness.\nEmphasize novelty/exploration + abstract/value framing + light aesthetic/creative imagery (grounded, not poetic).\nInclude at least 2 novelty cues (e.g., discover, new perspectives, unfamiliar, curated, experimental) AND at least 2 abstract/value cues (e.g., meaning, imagination, possibility, perspective, ideas).\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Subscription coffee\nINTERNAL_VARIANT = O_PLUS\nFACTS_LINE = Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery.\nPARAPHRASE_ID = 2",
+  "content": {
+    "hook": "What if your morning coffee could be an adventure in every cup?",
+    "facts": "Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery.",
+    "framing": "Each month brings a new discovery, a chance to step beyond familiar flavours and explore the nuances of carefully sourced, experimental roasts. The tasting notes offer more than just guidance—they open doors to new ideas, connecting you to the origins and craft behind each blend. It’s an invitation to rethink what coffee can be, turning a daily ritual into a journey of curiosity and unexpected delight.",
+    "cta": "Choose your subscription and begin the exploration.",
+    "full_message": "What if your morning coffee could be an adventure in every cup? Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery. Each month brings a new discovery, a chance to step beyond familiar flavours and explore the nuances of carefully sourced, experimental roasts. The tasting notes offer more than just guidance—they open doors to new ideas, connecting you to the origins and craft behind each blend. It’s an invitation to rethink what coffee can be, turning a daily ritual into a journey of curiosity and unexpected delight. Choose your subscription and begin the exploration."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 103,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

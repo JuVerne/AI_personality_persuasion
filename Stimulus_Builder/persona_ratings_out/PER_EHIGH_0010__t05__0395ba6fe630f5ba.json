@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-22T17:11:20Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "participant": {
+    "participant_type": "TYPE_E_HIGH",
+    "persona_id": "PER_EHIGH_0010",
+    "respondent_seed": 110010
+  },
+  "trial": {
+    "trial_index": 5,
+    "order_code": "E",
+    "condition_label": "TARGETED",
+    "stimulus_variant": "E_PLUS",
+    "product_id": "P5",
+    "product_name": "Subscription coffee",
+    "condition_id": "f4affb50ed752be8",
+    "output_id": "0395ba6fe630f5ba",
+    "paraphrase_id": 1,
+    "full_message": "Ready to energize your social life with every cup? Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery. Imagine starting your day with a lively group of friends, each enjoying a freshly brewed cup of coffee that kicks off the morning buzz. With E_PLUS, you can explore new flavors together, sharing tasting notes and experiences that spark conversations. Whether you’re hosting a gathering or need a pick-me-up for your next adventure, this subscription keeps the momentum going. Discover the perfect roast to elevate your mornings."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 7,
+    "effectiveness_rating_q2": 6,
+    "motivation": "The ad’s lively, social energy and confident framing make it feel exciting and shareable with friends."
+  }
+}

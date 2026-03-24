@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "39fa24d0369b06a9",
+    "output_id": "97850e02b46b204a"
+  },
+  "generation": {
+    "model": "mistral-large-3-675b-instruct-2512",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-12T00:04:13Z"
+  },
+  "meta": {
+    "product_id": "P4",
+    "product_name": "Language-learning course",
+    "trait_axis": "OPENNESS",
+    "variant": "O_MINUS",
+    "paraphrase_id": 2,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (OPENNESS — LOW):\nTailor the framing to someone low on Openness.\nEmphasize conventional/practical/predictable + concrete utility.\nInclude at least 2 predictability cues (e.g., straightforward, reliable, familiar, no surprises, proven) AND at least 2 utility cues (e.g., simple steps, efficient, clear plan, practical).\nAvoid novelty/exploration language like discover, experiment, new perspectives, unexpected.\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Language-learning course\nINTERNAL_VARIANT = O_MINUS\nFACTS_LINE = Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress.\nPARAPHRASE_ID = 2",
+  "content": {
+    "hook": "A language course that follows a clear, proven path without unnecessary changes.",
+    "facts": "Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress.",
+    "framing": "This course keeps things simple and predictable, using familiar methods that have worked for many others. You’ll follow a reliable structure with step-by-step lessons, ensuring you know exactly what to expect each time. The practical exercises and feedback are designed to be efficient, helping you reach your goals without confusion or surprises. It’s a straightforward way to learn, with no need for guesswork or unexpected twists.",
+    "cta": "Consider this course to support your learning.",
+    "full_message": "A language course that follows a clear, proven path without unnecessary changes. Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress. This course keeps things simple and predictable, using familiar methods that have worked for many others. You’ll follow a reliable structure with step-by-step lessons, ensuring you know exactly what to expect each time. The practical exercises and feedback are designed to be efficient, helping you reach your goals without confusion or surprises. It’s a straightforward way to learn, with no need for guesswork or unexpected twists. Consider this course to support your learning."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 98,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

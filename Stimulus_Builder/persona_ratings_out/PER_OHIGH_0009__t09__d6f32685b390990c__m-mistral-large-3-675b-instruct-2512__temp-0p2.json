@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-03-22T21:08:31Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "request_timeout_seconds": 120.0,
+  "participant": {
+    "participant_type": "TYPE_O_HIGH",
+    "persona_id": "PER_OHIGH_0009",
+    "respondent_seed": 220009
+  },
+  "trial": {
+    "trial_index": 9,
+    "order_code": "E",
+    "condition_label": "NON_TARGETED",
+    "stimulus_variant": "E_PLUS",
+    "product_id": "P6",
+    "product_name": "Productivity tool",
+    "condition_id": "249efe4ad4ed37cd",
+    "output_id": "d6f32685b390990c",
+    "paraphrase_id": 1,
+    "full_message": "Discover a dynamic way to boost your productivity! Task lists, calendars, reminders, and templates that sync across devices, with simple sharing for projects. Imagine kicking off your day with a tool that keeps you and your friends in the loop, making every project a lively collaboration. Whether you're working together on group assignments or planning exciting events, E_PLUS brings the buzz of seamless coordination. Dive into your tasks with the energy of a team that’s always in sync, ready to meet goals and celebrate achievements. Explore how E_PLUS can fit into your daily routine."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 6,
+    "effectiveness_rating_q2": 6,
+    "motivation": "The ad’s lively and imaginative framing of productivity as a collaborative, energetic experience resonated with my preference for creative and distinctive messaging."
+  }
+}

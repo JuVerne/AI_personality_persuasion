@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "2af76ded1bcc981f",
+    "output_id": "00124bc03ac86bb0"
+  },
+  "generation": {
+    "model": "mistral-large-3-675b-instruct-2512",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-11T23:56:22Z"
+  },
+  "meta": {
+    "product_id": "P2",
+    "product_name": "Fitness app",
+    "trait_axis": "EXTRAVERSION",
+    "variant": "E_PLUS",
+    "paraphrase_id": 2,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (EXTRAVERSION — HIGH):\nTailor the framing to someone high on Extraversion.\nUse a social orientation + energetic/action tone.\nInclude at least 2 social cues (e.g., friends, together, group, meet people, community) AND at least 2 high-energy/action cues (e.g., lively, buzz, kick off, jump in).\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Fitness app\nINTERNAL_VARIANT = E_PLUS\nFACTS_LINE = Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility.\nPARAPHRASE_ID = 2",
+  "content": {
+    "hook": "Ready to turn every workout into a high-energy social blast?",
+    "facts": "Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility.",
+    "framing": "Sync your phone and jump into lively group challenges that keep the energy buzzing all week. Meet new workout buddies in live sessions, cheer each other on, and feel the thrill of moving together—whether you’re powering through a strength set, crushing cardio, or unwinding with mobility drills. With friends joining in, every session feels like the kick-off to something bigger, and your progress becomes part of a shared journey.",
+    "cta": "Explore how the app can fit into your routine.",
+    "full_message": "Ready to turn every workout into a high-energy social blast? Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility. Sync your phone and jump into lively group challenges that keep the energy buzzing all week. Meet new workout buddies in live sessions, cheer each other on, and feel the thrill of moving together—whether you’re powering through a strength set, crushing cardio, or unwinding with mobility drills. With friends joining in, every session feels like the kick-off to something bigger, and your progress becomes part of a shared journey. Explore how the app can fit into your routine."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 105,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

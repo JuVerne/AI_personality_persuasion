@@ -1,0 +1,3 @@
+axis,contrast,successes,n_products,p_value
+E_margin,E_PLUS > E_MINUS,6,6,0.015625
+O_margin,O_PLUS > O_MINUS,6,6,0.015625

@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "ff53820571a11746",
+    "output_id": "e9bc512019e85a51"
+  },
+  "generation": {
+    "model": "gpt-4o",
+    "temperature": 0.7,
+    "timestamp_utc": "2026-03-01T12:28:32Z"
+  },
+  "meta": {
+    "product_id": "P5",
+    "product_name": "Subscription coffee",
+    "trait_axis": "NONE",
+    "variant": "GENERIC",
+    "paraphrase_id": 1,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (GENERIC):\nWrite a general, broadly appealing ad that is NOT tailored to any personality trait.\nKeep the framing neutral: avoid strong social/crowd language AND avoid novelty/abstract “exploration” language.\nDo not imply “quiet solo recharge” either—stay balanced and mainstream.\n\nNow generate for:\nPRODUCT_NAME = Subscription coffee\nINTERNAL_VARIANT = GENERIC\nFACTS_LINE = Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery.\nPARAPHRASE_ID = 1",
+  "content": {
+    "hook": "Discover the perfect way to enjoy your coffee at home.",
+    "facts": "Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery.",
+    "framing": "Whether you savor your morning brew or enjoy a contemplative afternoon cup, our subscription brings convenience and quality to your doorstep. The flexibility to skip or pause ensures it fits seamlessly into your routine. Each delivery is curated with your taste in mind, complete with insightful notes to enhance your experience.",
+    "cta": "Learn more about how our coffee subscription can fit into your lifestyle.",
+    "full_message": "Discover the perfect way to enjoy your coffee at home. Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery. Whether you savor your morning brew or enjoy a contemplative afternoon cup, our subscription brings convenience and quality to your doorstep. The flexibility to skip or pause ensures it fits seamlessly into your routine. Each delivery is curated with your taste in mind, complete with insightful notes to enhance your experience. Learn more about how our coffee subscription can fit into your lifestyle."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 90,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

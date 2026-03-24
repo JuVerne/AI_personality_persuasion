@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-03-22T21:12:12Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "request_timeout_seconds": 120.0,
+  "participant": {
+    "participant_type": "TYPE_O_HIGH",
+    "persona_id": "PER_OHIGH_0010",
+    "respondent_seed": 220010
+  },
+  "trial": {
+    "trial_index": 2,
+    "order_code": "D",
+    "condition_label": "GENERIC",
+    "stimulus_variant": "GENERIC",
+    "product_id": "P5",
+    "product_name": "Subscription coffee",
+    "condition_id": "ff53820571a11746",
+    "output_id": "e9bc512019e85a51",
+    "paraphrase_id": 1,
+    "full_message": "Discover the perfect way to enjoy your coffee at home. Fresh beans delivered monthly, your roast preference, flexible skip/pause, and tasting notes included with each delivery. Whether you savor your morning brew or enjoy a contemplative afternoon cup, our subscription brings convenience and quality to your doorstep. The flexibility to skip or pause ensures it fits seamlessly into your routine. Each delivery is curated with your taste in mind, complete with insightful notes to enhance your experience. Learn more about how our coffee subscription can fit into your lifestyle."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 5,
+    "effectiveness_rating_q2": 4,
+    "motivation": "The ad is clear and functional but lacks the imaginative or distinctive phrasing that would fully engage my preference for novelty."
+  }
+}

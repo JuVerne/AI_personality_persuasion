@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "c0eedb1a6cf20cf7",
+    "output_id": "1109cf523ba3a115"
+  },
+  "generation": {
+    "model": "mistral-large-3-675b-instruct-2512",
+    "temperature": 0.9,
+    "timestamp_utc": "2026-03-11T23:58:43Z"
+  },
+  "meta": {
+    "product_id": "P3",
+    "product_name": "Noise-cancelling headphones",
+    "trait_axis": "EXTRAVERSION",
+    "variant": "E_PLUS",
+    "paraphrase_id": 2,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (EXTRAVERSION — HIGH):\nTailor the framing to someone high on Extraversion.\nUse a social orientation + energetic/action tone.\nInclude at least 2 social cues (e.g., friends, together, group, meet people, community) AND at least 2 high-energy/action cues (e.g., lively, buzz, kick off, jump in).\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Noise-cancelling headphones\nINTERNAL_VARIANT = E_PLUS\nFACTS_LINE = Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus.\nPARAPHRASE_ID = 2",
+  "content": {
+    "hook": "Ready to turn every moment into a high-energy social highlight?",
+    "facts": "Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus.",
+    "framing": "These aren’t just headphones—they’re your ticket to amplifying every gathering, from spontaneous meet-ups to lively group adventures. Jump into the action without missing a beat, whether you're catching up with friends in a bustling spot or soaking in the buzz of a new place. Keep the momentum going all day, and stay connected to the people and sounds around you without skipping a step.",
+    "cta": "Explore the E_PLUS model to find your perfect sound.",
+    "full_message": "Ready to turn every moment into a high-energy social highlight? Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus. These aren’t just headphones—they’re your ticket to amplifying every gathering, from spontaneous meet-ups to lively group adventures. Jump into the action without missing a beat, whether you're catching up with friends in a bustling spot or soaking in the buzz of a new place. Keep the momentum going all day, and stay connected to the people and sounds around you without skipping a step. Explore the E_PLUS model to find your perfect sound."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 99,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

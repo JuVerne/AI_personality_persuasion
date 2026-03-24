@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-03-22T19:48:45Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "request_timeout_seconds": 120.0,
+  "participant": {
+    "participant_type": "TYPE_O_HIGH",
+    "persona_id": "PER_OHIGH_0003",
+    "respondent_seed": 220003
+  },
+  "trial": {
+    "trial_index": 15,
+    "order_code": "A",
+    "condition_label": "GENERIC",
+    "stimulus_variant": "GENERIC",
+    "product_id": "P2",
+    "product_name": "Fitness app",
+    "condition_id": "7484f3dcc06a3bd2",
+    "output_id": "bcc1a3fa31cd890d",
+    "paraphrase_id": 1,
+    "full_message": "Discover a flexible way to stay active and maintain your fitness goals. Personalized workouts from 10–30 minutes, progress tracking, and adjustable plans for strength, cardio, or mobility. This fitness app offers a straightforward solution to incorporate exercise into your daily routine, whether you're at home or on the go. It provides a range of workout lengths and types, allowing you to choose what fits best with your schedule and preferences. Adaptable options ensure your fitness journey is tailored to your changing needs. Consider downloading the app to explore its features today."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 4,
+    "effectiveness_rating_q2": 3,
+    "motivation": "The ad is clear and functional but lacks the imaginative or distinctive elements that would fully engage my preference for novelty and creativity."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-22T17:09:12Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "participant": {
+    "participant_type": "TYPE_E_HIGH",
+    "persona_id": "PER_EHIGH_0006",
+    "respondent_seed": 110006
+  },
+  "trial": {
+    "trial_index": 7,
+    "order_code": "B",
+    "condition_label": "TARGETED",
+    "stimulus_variant": "E_PLUS",
+    "product_id": "P1",
+    "product_name": "Weekend city trip",
+    "condition_id": "54b2e74589abdef8",
+    "output_id": "3371e94acf164ac9",
+    "paraphrase_id": 1,
+    "full_message": "Ready for an adventure-packed weekend getaway? Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. Picture yourself exploring the buzzing streets, surrounded by friends, as you dive into the vibrant city life. With endless opportunities to meet new people and share memorable experiences, the weekend kicks off with energy and excitement. Whether you're joining a lively group for a city tour or hitting the town to discover hidden gems, every moment is filled with social connections and high-energy fun. Learn more about your next weekend city trip."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 7,
+    "effectiveness_rating_q2": 7,
+    "motivation": "The ad’s lively, social energy and confident framing perfectly match my preference for momentum and shareable excitement."
+  }
+}

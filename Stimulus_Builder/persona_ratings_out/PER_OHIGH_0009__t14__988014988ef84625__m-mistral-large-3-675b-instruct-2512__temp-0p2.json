@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-03-22T21:10:06Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "request_timeout_seconds": 120.0,
+  "participant": {
+    "participant_type": "TYPE_O_HIGH",
+    "persona_id": "PER_OHIGH_0009",
+    "respondent_seed": 220009
+  },
+  "trial": {
+    "trial_index": 14,
+    "order_code": "A",
+    "condition_label": "NON_TARGETED",
+    "stimulus_variant": "E_PLUS",
+    "product_id": "P3",
+    "product_name": "Noise-cancelling headphones",
+    "condition_id": "0cc738179c3cee34",
+    "output_id": "988014988ef84625",
+    "paraphrase_id": 1,
+    "full_message": "Experience the perfect sound escape in any setting. Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus. Imagine kicking off your day with the buzz of your favorite tunes while meeting friends or enjoying a lively community event. The E_PLUS headphones offer the perfect blend of immersion and awareness, allowing you to jump into conversations or enjoy solo moments all in one go. Whether you're on the move or hanging out with a group, these headphones keep you connected and energized. Discover how E_PLUS headphones fit into your lifestyle."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 6,
+    "effectiveness_rating_q2": 5,
+    "motivation": "The ad’s imaginative framing of sound as an 'escape' and its emphasis on blending immersion with social awareness felt fresh and engaging."
+  }
+}

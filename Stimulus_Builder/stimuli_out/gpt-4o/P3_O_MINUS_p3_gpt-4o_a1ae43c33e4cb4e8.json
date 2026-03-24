@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "d6cf64344d744510",
+    "output_id": "a1ae43c33e4cb4e8"
+  },
+  "generation": {
+    "model": "gpt-4o",
+    "temperature": 0.8,
+    "timestamp_utc": "2026-03-01T12:14:07Z"
+  },
+  "meta": {
+    "product_id": "P3",
+    "product_name": "Noise-cancelling headphones",
+    "trait_axis": "OPENNESS",
+    "variant": "O_MINUS",
+    "paraphrase_id": 3,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (OPENNESS — LOW):\nTailor the framing to someone low on Openness.\nEmphasize conventional/practical/predictable + concrete utility.\nInclude at least 2 predictability cues (e.g., straightforward, reliable, familiar, no surprises, proven) AND at least 2 utility cues (e.g., simple steps, efficient, clear plan, practical).\nAvoid novelty/exploration language like discover, experiment, new perspectives, unexpected.\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Noise-cancelling headphones\nINTERNAL_VARIANT = O_MINUS\nFACTS_LINE = Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus.\nPARAPHRASE_ID = 3",
+  "content": {
+    "hook": "Experience uninterrupted focus with headphones designed for your routine.",
+    "facts": "Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus.",
+    "framing": "These headphones offer a reliable way to keep distractions at bay, perfect for those who appreciate a straightforward and familiar listening experience. With proven features like active noise cancellation and a 30-hour battery, they provide practical and efficient solutions for both travel and work. The comfortable over-ear design ensures a predictable fit every time, making them an ideal choice for everyday use.",
+    "cta": "Learn more about how these headphones can fit into your lifestyle.",
+    "full_message": "Experience uninterrupted focus with headphones designed for your routine. Active noise cancellation, transparency mode, 30-hour battery, and comfortable over-ear fit for travel or focus. These headphones offer a reliable way to keep distractions at bay, perfect for those who appreciate a straightforward and familiar listening experience. With proven features like active noise cancellation and a 30-hour battery, they provide practical and efficient solutions for both travel and work. The comfortable over-ear design ensures a predictable fit every time, making them an ideal choice for everyday use. Learn more about how these headphones can fit into your lifestyle."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 97,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}

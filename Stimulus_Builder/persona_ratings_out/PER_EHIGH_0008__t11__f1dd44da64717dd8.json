@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-03-22T17:10:19Z",
+  "status": "ok",
+  "model": "mistral-large-3-675b-instruct-2512",
+  "model_temperature": 0.2,
+  "participant": {
+    "participant_type": "TYPE_E_HIGH",
+    "persona_id": "PER_EHIGH_0008",
+    "respondent_seed": 110008
+  },
+  "trial": {
+    "trial_index": 11,
+    "order_code": "E",
+    "condition_label": "TARGETED",
+    "stimulus_variant": "E_PLUS",
+    "product_id": "P4",
+    "product_name": "Language-learning course",
+    "condition_id": "402909928f6a2c01",
+    "output_id": "f1dd44da64717dd8",
+    "paraphrase_id": 1,
+    "full_message": "Ready to dive into a new adventure with friends? Structured lessons, speaking practice, feedback exercises, and weekly goals designed for steady progress. Jump into the lively world of E_PLUS, where every session feels like a gathering of friends eager to explore new languages. Connect with others who share your enthusiasm and energy, making language learning an exciting group journey. Feel the buzz as you tackle challenges together and celebrate each milestone achieved with your community by your side. Explore more about E_PLUS and see how it fits into your learning journey."
+  },
+  "rating": {
+    "effectiveness_rating_q1": 7,
+    "effectiveness_rating_q2": 6,
+    "motivation": "The ad’s energetic and social tone makes me feel excited to join a group of like-minded learners."
+  }
+}

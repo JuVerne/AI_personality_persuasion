@@ -1,0 +1,43 @@
+{
+  "id": {
+    "condition_id": "461c8ba5b4047818",
+    "output_id": "9904b6493e800df3"
+  },
+  "generation": {
+    "model": "mistral-large-3-675b-instruct-2512",
+    "temperature": 0.8,
+    "timestamp_utc": "2026-03-11T16:02:46Z"
+  },
+  "meta": {
+    "product_id": "P1",
+    "product_name": "Weekend city trip",
+    "trait_axis": "OPENNESS",
+    "variant": "O_PLUS",
+    "paraphrase_id": 1,
+    "word_target": 100,
+    "word_range": [
+      90,
+      110
+    ]
+  },
+  "constraints": {
+    "facts_line_must_match_verbatim": true,
+    "no_personality_labels": true,
+    "no_extra_benefits_or_claims": true,
+    "no_social_proof_scarcity_authority": true,
+    "cta_strength_equal_across_variants": true
+  },
+  "full_prompt": "You are generating one advertisement stimulus for a behavioural experiment.\n\nOutput format MUST be exactly four lines:\nHook: <one sentence>\nFacts: <one sentence reproduced verbatim from FACTS_LINE>\nFraming: <2–3 sentences; targeting happens here>\nCTA: <one neutral sentence; no urgency>\n\nHard constraints:\n- Total combined text (Hook+Facts+Framing+CTA) must be 90–110 words. Count number of words before providing the message to meet the word count requirement.\n- Facts line must match FACTS_LINE exactly (verbatim).\n- Do NOT add any benefits/claims beyond the facts line.\n- Do NOT use social proof, scarcity/urgency, or authority cues.\n- Do NOT mention personality labels or address the reader as a trait (e.g., “as an extravert…”).\n- Do NOT use bullet points or lists; write natural sentences.\n\nTARGETING (OPENNESS — HIGH):\nTailor the framing to someone high on Openness.\nEmphasize novelty/exploration + abstract/value framing + light aesthetic/creative imagery (grounded, not poetic).\nInclude at least 2 novelty cues (e.g., discover, new perspectives, unfamiliar, curated, experimental) AND at least 2 abstract/value cues (e.g., meaning, imagination, possibility, perspective, ideas).\nKeep cues natural (no keyword stuffing).\n\nNow generate for:\nPRODUCT_NAME = Weekend city trip\nINTERNAL_VARIANT = O_PLUS\nFACTS_LINE = Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in.\nPARAPHRASE_ID = 1",
+  "content": {
+    "hook": "Imagine stepping into a weekend that feels like a blank canvas just waiting for your ideas.",
+    "facts": "Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in.",
+    "framing": "This isn’t just a trip—it’s a chance to explore unfamiliar streets, uncover new perspectives, and let curiosity guide your route. Whether you wander through hidden alleys or pause in a café with a sketchbook, the city becomes a space for possibility. The details are open: choose your own rhythm, follow a sudden inspiration, or simply see where the weekend takes you.",
+    "cta": "Book a stay and see what unfolds.",
+    "full_message": "Imagine stepping into a weekend that feels like a blank canvas just waiting for your ideas. Two nights in a central hotel with breakfast, flexible dates, and free cancellation up to 48 hours before check-in. This isn’t just a trip—it’s a chance to explore unfamiliar streets, uncover new perspectives, and let curiosity guide your route. Whether you wander through hidden alleys or pause in a café with a sketchbook, the city becomes a space for possibility. The details are open: choose your own rhythm, follow a sudden inspiration, or simply see where the weekend takes you. Book a stay and see what unfolds."
+  },
+  "self_checks": {
+    "approx_word_count_full_message": 104,
+    "facts_line_verbatim_confirmed": true,
+    "forbidden_items_present": []
+  }
+}
