@@ -1,115 +1,53 @@
-# Quick Start Guide
+# Quick Start (Stimulus_Builder)
 
-## Note on Active Workflow
+This repo’s active workflow lives in `Stimulus_Builder/`.
 
-For current work, use the `Stimulus_Builder/` pipeline:
-- `python Stimulus_Builder/build_simplified_experiment.py`
-- `python Stimulus_Builder/run_ratings.py --test`
+## 1) Environment
 
-The steps below describe the older `src/` experiment path.
-
-## 1. Setup (2 minutes)
+Minimal dependencies (enough to run the scripts):
 
 ```bash
-# Install dependencies
 pip install -r requirements.txt
+```
 
-# Copy and configure environment file
+Optional: create the full conda env used during development:
+
+```bash
+conda env create -f requirements.yml
+conda activate llm
+```
+
+## 2) API key
+
+Create a `.env` in the repo root (or in `Stimulus_Builder/`):
+
+```bash
+# macOS/Linux
 cp .env.example .env
-# Edit .env and add your OpenAI API key
+
+# Windows (PowerShell)
+# Copy-Item .env.example .env
 ```
 
-## 2. Run the Experiment (5-10 minutes)
+Then set `CHAT_AI_API_KEY=...` (and optionally `GWDG_BASE_URL=...`).
+
+## 3) Build designs
 
 ```bash
-python main.py
+python Stimulus_Builder/build_simplified_experiment.py
 ```
 
-This will:
-- Test your API connection
-- Run a quick 2-iteration experiment
-- Save results to `results/`
-- Print a summary
+## 4) Validate + run a safe test
 
-## 3. Explore Results
-
-Check these files after running:
-- `results/results_YYYYMMDD_HHMMSS.json` - Full detailed results
-- `results/results_YYYYMMDD_HHMMSS.csv` - Easy-to-analyze CSV format
-
-## 4. Advanced Usage
-
-For more examples and customization:
 ```bash
-python advanced_example.py
+python Stimulus_Builder/prepare_rating_pipeline.py
+python Stimulus_Builder/run_ratings.py --test
 ```
 
-Or customize `main.py` and run:
-```python
-runner.run_experiment(
-    num_iterations=5,
-    personalities=["openness", "conscientiousness"],
-    tone_pairs=[("academic", "casual")],
-    topics=["technology"],
-    verbose=True
-)
+## 5) Analyze
+
+```bash
+python Stimulus_Builder/analyze_ratings.py
 ```
 
-## API Key Setup
-
-1. Get an API key from https://platform.openai.com/account/api-keys
-2. Add to `.env`: `OPENAI_API_KEY=sk-your-key-here`
-3. Run `python main.py`
-
-## What Happens in the Experiment
-
-1. **Generate Messages**: Creates short messages with different linguistic styles
-   - Tone: academic vs casual
-   - Topics: technology, environment, education
-   
-2. **Apply Personality**: System prompts make the LLM adopt Big-5 personalities
-   - Openness (creative)
-   - Conscientiousness (organized)
-   - Extraversion (social)
-   - Agreeableness (compassionate)
-   - Neuroticism (cautious)
-
-3. **Compare Preferences**: Each personality chooses between two messages
-   - Records which message it prefers
-   - Saves explanation
-
-4. **Analyze Results**: Summary shows preference patterns
-   - Which personalities prefer which tone/style
-   - Potential insights about AI personality-language interaction
-
-## Expected Results
-
-You should see which personality types prefer different linguistic styles:
-- Creative types → casual tone?
-- Organized types → academic tone?
-- Social types → engaging tone?
-
-## Cost Estimate
-
-Default experiment (2 iterations, 5 personalities, 2 tone pairs, 2 topics):
-- ~150 API calls
-- ~$0.10 with gpt-3.5-turbo
-- ~$5 with gpt-4
-
-## Troubleshooting
-
-**"API key error"** → Check .env file has correct key starting with `sk-`
-
-**"Connection failed"** → Verify internet connection and API credits
-
-**"Import errors"** → Run from project root: `python main.py`
-
-## Next Steps
-
-- Run more iterations for statistical significance
-- Add new topics or linguistic attributes
-- Analyze patterns by personality type
-- Publish findings!
-
----
-See README.md for full documentation
+More detail: `Stimulus_Builder/RUNBOOK.md`.

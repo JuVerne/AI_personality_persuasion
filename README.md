@@ -10,5 +10,3 @@ Start here:
 - `Stimulus_Builder/PROJECT_MAP.md`
 - `Stimulus_Builder/build_simplified_experiment.py`
 - `Stimulus_Builder/run_ratings.py`
-
-The `src/`-based pipeline is retained as legacy/reference code.
